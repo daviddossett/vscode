@@ -39,7 +39,7 @@ export class FloatingClickWidget extends Widget {
 		clearNode(this._domNode);
 		this._domNode.style.backgroundColor = asCssVariableWithDefault(buttonBackground, asCssVariable(editorBackground));
 		this._domNode.style.color = asCssVariableWithDefault(buttonForeground, asCssVariable(editorForeground));
-		this._domNode.style.border = `1px solid ${asCssVariable(contrastBorder)}`;
+		this._domNode.style.border = `0.5px solid ${asCssVariable(contrastBorder)}`;
 
 		append(this._domNode, $('')).textContent = this.label;
 

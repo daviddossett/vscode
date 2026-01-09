@@ -128,7 +128,7 @@ export class McpToolCallUI extends Disposable {
 						'--border-radius-xl': '8px',
 						'--border-radius-full': '9999px',
 
-						'--border-width-regular': '1px',
+						'--border-width-regular': '0.5px',
 
 						'--font-text-xs-line-height': '1.5',
 						'--font-text-sm-line-height': '1.5',

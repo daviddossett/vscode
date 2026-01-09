@@ -719,22 +719,22 @@ export class NotebookEditorWidget extends Disposable implements INotebookEditorD
 
 			/* top border */
 			.monaco-workbench .notebookOverlay .monaco-list .monaco-list-row .cell-focus-indicator-top:before {
-				border-top: 1px solid transparent;
+				border: 0.5px solid transparent;
 			}
 
 			/* left border */
 			.monaco-workbench .notebookOverlay .monaco-list .monaco-list-row .cell-focus-indicator-left:before {
-				border-left: 1px solid transparent;
+				border: 0.5px solid transparent;
 			}
 
 			/* bottom border */
 			.monaco-workbench .notebookOverlay .monaco-list .monaco-list-row .cell-focus-indicator-bottom:before {
-				border-bottom: 1px solid transparent;
+				border: 0.5px solid transparent;
 			}
 
 			/* right border */
 			.monaco-workbench .notebookOverlay .monaco-list .monaco-list-row .cell-focus-indicator-right:before {
-				border-right: 1px solid transparent;
+				border: 0.5px solid transparent;
 			}
 			`);
 

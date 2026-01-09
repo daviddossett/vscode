@@ -16,7 +16,7 @@ import { ActiveEditorContext } from '../../../../common/contextkeys.js';
 import { ChatContextKeys } from '../../common/actions/chatContextKeys.js';
 import { IChatEditingSession } from '../../common/editing/chatEditingService.js';
 import { IChatService } from '../../common/chatService/chatService.js';
-import { ChatAgentLocation, ChatModeKind } from '../../common/constants.js';
+import { ChatModeKind } from '../../common/constants.js';
 import { ChatViewId, IChatWidgetService } from '../chat.js';
 import { EditingSessionAction, getEditingSessionContext } from '../chatEditing/chatEditingActions.js';
 import { ChatEditorInput } from '../widgetHosts/editor/chatEditorInput.js';
@@ -46,17 +46,6 @@ export interface INewEditSessionActionContext {
 
 export function registerNewChatActions() {
 
-	// Add "New Chat" submenu to Chat view menu
-	MenuRegistry.appendMenuItem(MenuId.ViewTitle, {
-		submenu: MenuId.ChatNewMenu,
-		title: localize2('chat.newEdits.label', "New Chat"),
-		icon: Codicon.plus,
-		when: ContextKeyExpr.equals('view', ChatViewId),
-		group: 'navigation',
-		order: -1,
-		isSplitButton: true
-	});
-
 	registerAction2(class NewChatEditorAction extends Action2 {
 		constructor() {
 			super({
@@ -79,7 +68,7 @@ export function registerNewChatActions() {
 				title: localize2('chat.newEdits.label', "New Chat"),
 				category: CHAT_CATEGORY,
 				icon: Codicon.plus,
-				precondition: ContextKeyExpr.and(ChatContextKeys.enabled, ChatContextKeys.location.isEqualTo(ChatAgentLocation.Chat)),
+				precondition: ChatContextKeys.enabled,
 				f1: true,
 				menu: [
 					{

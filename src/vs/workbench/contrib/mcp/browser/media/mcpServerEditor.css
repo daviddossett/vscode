@@ -62,7 +62,7 @@
 				margin-bottom: 5px;
 				font-size: 1.4em;
 				font-weight: 600;
-				border-bottom: 1px solid var(--vscode-panelSection-border);
+				border-bottom: 0.5px solid var(--vscode-panelSection-border);
 				padding: 5px;
 			}
 
@@ -78,7 +78,7 @@
 
 				.package-separator {
 					margin-top: 10px;
-					border-bottom: 1px solid var(--vscode-panelSection-border);
+					border-bottom: 0.5px solid var(--vscode-panelSection-border);
 				}
 			}
 		}

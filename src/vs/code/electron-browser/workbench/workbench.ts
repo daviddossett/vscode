@@ -97,7 +97,7 @@
 				borderElement.style.width = 'calc(100vw - 2px)';
 				borderElement.style.height = 'calc(100vh - 2px)';
 				borderElement.style.zIndex = '1'; // allow border above other elements
-				borderElement.style.border = `1px solid var(--window-border-color)`;
+				borderElement.style.border = `0.5px solid var(--window-border-color)`;
 				borderElement.style.setProperty('--window-border-color', colorInfo.windowBorder);
 
 				if (layoutInfo.windowBorderRadius) {
@@ -136,7 +136,7 @@
 					titleBorder.style.height = '1px';
 					titleBorder.style.left = '0';
 					titleBorder.style.bottom = '0';
-					titleBorder.style.borderBottom = `1px solid ${colorInfo.titleBarBorder}`;
+					titleBorder.style.borderBottom = `0.5px solid ${colorInfo.titleBarBorder}`;
 					titleDiv.appendChild(titleBorder);
 				}
 			}
@@ -164,10 +164,10 @@
 					activityBorderDiv.style.top = '0';
 					if (layoutInfo.sideBarSide === 'left') {
 						activityBorderDiv.style.right = '0';
-						activityBorderDiv.style.borderRight = `1px solid ${colorInfo.activityBarBorder}`;
+						activityBorderDiv.style.borderRight = `0.5px solid ${colorInfo.activityBarBorder}`;
 					} else {
 						activityBorderDiv.style.left = '0';
-						activityBorderDiv.style.borderLeft = `1px solid ${colorInfo.activityBarBorder}`;
+						activityBorderDiv.style.borderLeft = `0.5px solid ${colorInfo.activityBarBorder}`;
 					}
 					activityDiv.appendChild(activityBorderDiv);
 				}
@@ -196,10 +196,10 @@
 					sideBorderDiv.style.top = '0';
 					sideBorderDiv.style.right = '0';
 					if (layoutInfo.sideBarSide === 'left') {
-						sideBorderDiv.style.borderRight = `1px solid ${colorInfo.sideBarBorder}`;
+						sideBorderDiv.style.borderRight = `0.5px solid ${colorInfo.sideBarBorder}`;
 					} else {
 						sideBorderDiv.style.left = '0';
-						sideBorderDiv.style.borderLeft = `1px solid ${colorInfo.sideBarBorder}`;
+						sideBorderDiv.style.borderLeft = `0.5px solid ${colorInfo.sideBarBorder}`;
 					}
 					sideDiv.appendChild(sideBorderDiv);
 				}
@@ -228,10 +228,10 @@
 					auxSideBorderDiv.style.top = '0';
 					if (layoutInfo.sideBarSide === 'left') {
 						auxSideBorderDiv.style.left = '0';
-						auxSideBorderDiv.style.borderLeft = `1px solid ${colorInfo.sideBarBorder}`;
+						auxSideBorderDiv.style.borderLeft = `0.5px solid ${colorInfo.sideBarBorder}`;
 					} else {
 						auxSideBorderDiv.style.right = '0';
-						auxSideBorderDiv.style.borderRight = `1px solid ${colorInfo.sideBarBorder}`;
+						auxSideBorderDiv.style.borderRight = `0.5px solid ${colorInfo.sideBarBorder}`;
 					}
 					auxSideDiv.appendChild(auxSideBorderDiv);
 				}
@@ -258,7 +258,7 @@
 					statusBorderDiv.style.width = '100%';
 					statusBorderDiv.style.height = '1px';
 					statusBorderDiv.style.top = '0';
-					statusBorderDiv.style.borderTop = `1px solid ${colorInfo.statusBarBorder}`;
+					statusBorderDiv.style.borderTop = `0.5px solid ${colorInfo.statusBarBorder}`;
 					statusDiv.appendChild(statusBorderDiv);
 				}
 			}

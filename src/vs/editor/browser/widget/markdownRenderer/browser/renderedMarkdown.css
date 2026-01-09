@@ -7,7 +7,7 @@
 	background-color: var(--vscode-keybindingLabel-background);
 	color: var(--vscode-keybindingLabel-foreground);
 	border-style: solid;
-	border-width: 1px;
+	border-width: 0.5px;
 	border-radius: 3px;
 	border-color: var(--vscode-keybindingLabel-border);
 	border-bottom-color: var(--vscode-keybindingLabel-bottomBorder);

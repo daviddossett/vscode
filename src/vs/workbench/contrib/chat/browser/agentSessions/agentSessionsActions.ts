@@ -640,12 +640,6 @@ export class RefreshAgentSessionsViewerAction extends Action2 {
 			id: 'agentSessionsViewer.refresh',
 			title: localize2('refresh', "Refresh Agent Sessions"),
 			icon: Codicon.refresh,
-			menu: {
-				id: MenuId.AgentSessionsToolbar,
-				group: 'navigation',
-				order: 1,
-				when: ChatContextKeys.agentSessionsViewerLimited.negate()
-			},
 		});
 	}
 

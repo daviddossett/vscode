@@ -881,7 +881,7 @@ export class QuickInputController extends Disposable {
 			this.ui.titleBar.style.backgroundColor = quickInputTitleBackground ?? '';
 			this.ui.container.style.backgroundColor = quickInputBackground ?? '';
 			this.ui.container.style.color = quickInputForeground ?? '';
-			this.ui.container.style.border = widgetBorder ? `1px solid ${widgetBorder}` : '';
+			this.ui.container.style.border = widgetBorder ? `0.5px solid ${widgetBorder}` : '';
 			this.ui.container.style.boxShadow = widgetShadow ? `0 0 8px 2px ${widgetShadow}` : '';
 			this.ui.list.style(this.styles.list);
 			this.ui.tree.tree.style(this.styles.list);

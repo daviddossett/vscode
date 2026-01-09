@@ -169,8 +169,8 @@ export class AuxiliaryBarPart extends AbstractPaneCompositePart {
 		container.style.borderLeftStyle = borderColor && !isPositionLeft ? 'solid' : 'none';
 		container.style.borderRightStyle = borderColor && isPositionLeft ? 'solid' : 'none';
 
-		container.style.borderLeftWidth = borderColor && !isPositionLeft ? '1px' : '0px';
-		container.style.borderRightWidth = borderColor && isPositionLeft ? '1px' : '0px';
+		container.style.borderLeftWidth = borderColor && !isPositionLeft ? '0.5px' : '0px';
+		container.style.borderRightWidth = borderColor && isPositionLeft ? '0.5px' : '0px';
 	}
 
 	protected getCompositeBarOptions(): IPaneCompositeBarOptions {

@@ -1025,7 +1025,7 @@ export class ChatWidget extends Disposable implements IChatWidget {
 		return {
 			title,
 			message: undefined,
-			icon: Codicon.chatSparkle,
+			icon: Codicon.copilotLarge,
 			additionalMessage,
 			suggestedPrompts: this.getPromptFileSuggestions()
 		};
@@ -1050,18 +1050,7 @@ export class ChatWidget extends Disposable implements IChatWidget {
 					}
 				];
 			} else {
-				return [
-					{
-						icon: Codicon.debugAlt,
-						label: localize('chatWidget.suggestedPrompts.buildWorkspace', "Build Workspace"),
-						prompt: localize('chatWidget.suggestedPrompts.buildWorkspacePrompt', "How do I build this workspace?"),
-					},
-					{
-						icon: Codicon.gear,
-						label: localize('chatWidget.suggestedPrompts.findConfig', "Show Config"),
-						prompt: localize('chatWidget.suggestedPrompts.findConfigPrompt', "Where is the configuration for this project defined?"),
-					}
-				];
+				return [];
 			}
 		}
 

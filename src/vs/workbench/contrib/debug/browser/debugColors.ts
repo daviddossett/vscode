@@ -191,7 +191,7 @@ export function registerColors() {
 		if (contrastBorderColor) {
 			collector.addRule(`
 			.debug-pane .line-number {
-				border: 1px solid ${contrastBorderColor};
+				border: 0.5px solid ${contrastBorderColor};
 			}
 			`);
 		}
@@ -258,7 +258,7 @@ export function registerColors() {
 
 		collector.addRule(`
 			.repl .repl-input-wrapper {
-				border-top: 1px solid ${debugConsoleInputBorderColor};
+				border: 0.5px solid ${debugConsoleInputBorderColor};
 			}
 
 			.monaco-workbench .repl .repl-tree .output .expression .value.info {

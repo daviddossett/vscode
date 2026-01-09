@@ -22,7 +22,7 @@
 .mtkoverflow {
 	background-color: var(--vscode-button-background, var(--vscode-editor-background));
 	color: var(--vscode-button-foreground, var(--vscode-editor-foreground));
-	border-width: 1px;
+	border-width: 0.5px;
 	border-style: solid;
 	border-color: var(--vscode-contrastBorder);
 	border-radius: 2px;

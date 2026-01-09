@@ -131,7 +131,7 @@ class DropOverlay extends Themable {
 
 			const borderColor = this.getColor(EDITOR_DROP_INTO_PROMPT_BORDER);
 			if (borderColor) {
-				this.dropIntoPromptElement.style.borderWidth = '1px';
+				this.dropIntoPromptElement.style.borderWidth = '0.5px';
 				this.dropIntoPromptElement.style.borderStyle = 'solid';
 				this.dropIntoPromptElement.style.borderColor = borderColor;
 			} else {

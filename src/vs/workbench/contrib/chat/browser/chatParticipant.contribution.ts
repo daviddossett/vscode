@@ -37,12 +37,13 @@ import { ChatViewPane } from './widgetHosts/viewPane/chatViewPane.js';
 const chatViewContainer: ViewContainer = Registry.as<IViewContainersRegistry>(ViewExtensions.ViewContainersRegistry).registerViewContainer({
 	id: ChatViewContainerId,
 	title: localize2('chat.viewContainer.label', "Chat"),
-	icon: Codicon.chatSparkle,
+	icon: Codicon.copilotLarge,
 	ctorDescriptor: new SyncDescriptor(ViewPaneContainer, [ChatViewContainerId, { mergeViewWithContainerWhenSingleView: true }]),
 	storageId: ChatViewContainerId,
 	hideIfEmpty: true,
+	rejectAddedViews: true,
 	order: 1,
-}, ViewContainerLocation.AuxiliaryBar, { isDefault: true, doNotRegisterOpenCommand: true });
+}, ViewContainerLocation.Sidebar, { isDefault: true, doNotRegisterOpenCommand: true });
 
 const chatViewDescriptor: IViewDescriptor = {
 	id: ChatViewId,
@@ -51,7 +52,7 @@ const chatViewDescriptor: IViewDescriptor = {
 	singleViewPaneContainerTitle: chatViewContainer.title.value,
 	name: localize2('chat.viewContainer.label', "Chat"),
 	canToggleVisibility: false,
-	canMoveView: true,
+	canMoveView: false,
 	openCommandActionDescriptor: {
 		id: ChatViewContainerId,
 		title: chatViewContainer.title,

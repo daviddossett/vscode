@@ -12,7 +12,7 @@
 	cursor: default;
 	color: var(--vscode-editorHoverWidget-foreground);
 	background-color: var(--vscode-editorHoverWidget-background);
-	border: 1px solid var(--vscode-editorHoverWidget-border);
+	border: 0.5px solid var(--vscode-editorHoverWidget-border);
 }
 
 .hc-black .monaco-editor .parameter-hints-widget,
@@ -37,7 +37,7 @@
 	height: 100%;
 	position: absolute;
 	opacity: 0.5;
-	border-left: 1px solid var(--vscode-editorHoverWidget-border);
+	border-left: 0.5px solid var(--vscode-editorHoverWidget-border);
 }
 
 .monaco-editor .parameter-hints-widget p,
@@ -66,7 +66,7 @@
 	width: 100%;
 	padding-top: 4px;
 	opacity: 0.5;
-	border-bottom: 1px solid var(--vscode-editorHoverWidget-border);
+	border-bottom: 0.5px solid var(--vscode-editorHoverWidget-border);
 }
 
 .monaco-editor .parameter-hints-widget .code {

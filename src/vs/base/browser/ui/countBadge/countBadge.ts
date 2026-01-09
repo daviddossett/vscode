@@ -77,7 +77,7 @@ export class CountBadge extends Disposable {
 		this.element.style.color = this.styles.badgeForeground ?? '';
 
 		if (this.styles.badgeBorder) {
-			this.element.style.border = `1px solid ${this.styles.badgeBorder}`;
+			this.element.style.border = `0.5px solid ${this.styles.badgeBorder}`;
 		}
 	}
 }

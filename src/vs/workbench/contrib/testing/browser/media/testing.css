@@ -82,7 +82,7 @@
 
 .test-output-peek-tree {
 	color: var(--vscode-editor-foreground);
-	border-left: 1px solid var(--vscode-panelSection-border);
+	border-left: 0.5px solid var(--vscode-panelSection-border);
 }
 
 .test-explorer .monaco-list-row .codicon-testing-hidden {
@@ -99,7 +99,7 @@
 	color: var(--vscode-inputOption-activeForeground);
 	border-color: var(--vscode-inputOption-activeBorder);
 	background: var(--vscode-inputOption-activeBackground);
-	border: 1px solid var(--vscode-inputOption-activeBorder);
+	border: 0.5px solid var(--vscode-inputOption-activeBorder);
 	border-radius: 3px;
 }
 
@@ -426,7 +426,7 @@
 	cursor: pointer;
 	box-sizing: border-box;
 	position: relative;
-	border: 1px solid var(--vscode-testing-message-error-badgeBorder);
+	border: 0.5px solid var(--vscode-testing-message-error-badgeBorder);
 	border-left: none;
 
 	&.is-current {
@@ -478,7 +478,7 @@
 
 .test-coverage-bars .bar {
 	height: 8px;
-	border: 1px solid currentColor;
+	border: 0.5px solid currentColor;
 	border-radius: 2px;
 	position: relative;
 	overflow: hidden;
@@ -555,7 +555,7 @@
 	display: flex;
 	background-color: var(--vscode-dropdown-background);
 	color: var(--vscode-dropdown-foreground);
-	border: 1px solid var(--vscode-dropdown-border);
+	border: 0.5px solid var(--vscode-dropdown-border);
 
 	margin: 3px 0;
 	cursor: pointer;
@@ -675,7 +675,7 @@
 		padding: calc(var(--vscode-testing-coverage-lineHeight) / 10);
 		border-radius: 2px;
 		font: normal normal normal calc(var(--vscode-testing-coverage-lineHeight) / 2)/1 codicon;
-		border: 1px solid;
+		border: 0.5px solid;
 	}
 
 	.coverage-deco-inline-count {

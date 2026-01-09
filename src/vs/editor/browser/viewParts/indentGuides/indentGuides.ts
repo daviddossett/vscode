@@ -325,12 +325,12 @@ registerThemingParticipant((theme, collector) => {
 		}
 
 		collector.addRule(`.monaco-editor .vertical { box-shadow: 1px 0 0 0 var(--guide-color) inset; }`);
-		collector.addRule(`.monaco-editor .horizontal-top { border-top: 1px solid var(--guide-color); }`);
-		collector.addRule(`.monaco-editor .horizontal-bottom { border-bottom: 1px solid var(--guide-color); }`);
+		collector.addRule(`.monaco-editor .horizontal-top { border: 0.5px solid var(--guide-color); }`);
+		collector.addRule(`.monaco-editor .horizontal-bottom { border: 0.5px solid var(--guide-color); }`);
 
 		collector.addRule(`.monaco-editor .vertical.${colorProvider.activeClassName} { box-shadow: 1px 0 0 0 var(--guide-color-active) inset; }`);
-		collector.addRule(`.monaco-editor .horizontal-top.${colorProvider.activeClassName} { border-top: 1px solid var(--guide-color-active); }`);
-		collector.addRule(`.monaco-editor .horizontal-bottom.${colorProvider.activeClassName} { border-bottom: 1px solid var(--guide-color-active); }`);
+		collector.addRule(`.monaco-editor .horizontal-top.${colorProvider.activeClassName} { border: 0.5px solid var(--guide-color-active); }`);
+		collector.addRule(`.monaco-editor .horizontal-bottom.${colorProvider.activeClassName} { border: 0.5px solid var(--guide-color-active); }`);
 	}
 
 	if (indentColorValues.length > 0) {

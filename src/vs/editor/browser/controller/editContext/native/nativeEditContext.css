@@ -34,7 +34,7 @@
 }
 
 .monaco-editor :not(.hc-black, .hc-light) .edit-context-composition-secondary {
-	border-bottom: 1px solid var(--vscode-editor-compositionBorder);
+	border-bottom: 0.5px solid var(--vscode-editor-compositionBorder);
 }
 
 .monaco-editor :not(.hc-black, .hc-light) .edit-context-composition-primary {
@@ -42,7 +42,7 @@
 }
 
 .monaco-editor :is(.hc-black, .hc-light) .edit-context-composition-secondary {
-	border: 1px solid var(--vscode-editor-compositionBorder);
+	border: 0.5px solid var(--vscode-editor-compositionBorder);
 }
 
 .monaco-editor :is(.hc-black, .hc-light) .edit-context-composition-primary {

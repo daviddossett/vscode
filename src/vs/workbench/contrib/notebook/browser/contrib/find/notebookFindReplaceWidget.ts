@@ -215,7 +215,7 @@ export class NotebookFindInputFilterButton extends Disposable {
 	applyStyles(filterChecked: boolean): void {
 		const toggleStyles = this._toggleStyles;
 
-		this._filterButtonContainer.style.border = '1px solid transparent';
+		this._filterButtonContainer.style.border = '0.5px solid transparent';
 		this._filterButtonContainer.style.borderRadius = '3px';
 		this._filterButtonContainer.style.borderColor = (filterChecked && toggleStyles.inputActiveOptionBorder) || '';
 		this._filterButtonContainer.style.color = (filterChecked && toggleStyles.inputActiveOptionForeground) || 'inherit';

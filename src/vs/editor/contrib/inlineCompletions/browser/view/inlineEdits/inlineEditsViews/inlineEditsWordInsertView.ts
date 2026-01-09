@@ -101,7 +101,7 @@ export class InlineEditsWordInsertView extends Disposable implements IInlineEdit
 							position: 'absolute',
 							...rectToProps(reader => layout.read(reader).background),
 							borderRadius: `${INLINE_EDITS_BORDER_RADIUS}px`,
-							border: `1px solid ${modifiedBorderColor}`,
+							border: `0.5px solid ${modifiedBorderColor}`,
 							//background: 'rgba(122, 122, 122, 0.12)', looks better
 							background: 'var(--vscode-inlineEdit-wordReplacementView-background)',
 						}

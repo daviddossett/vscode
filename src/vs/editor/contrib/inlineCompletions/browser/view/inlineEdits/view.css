@@ -18,7 +18,7 @@
 
 		color: var(--vscode-inlineEdit-gutterIndicator-primaryForeground);
 		background-color: var(--vscode-inlineEdit-gutterIndicator-background);
-		border: 1px solid var(--vscode-inlineEdit-gutterIndicator-primaryBorder);
+		border: 0.5px solid var(--vscode-inlineEdit-gutterIndicator-primaryBorder);
 		border-radius: var(--inline-edit-border-radius);
 
 		align-items: center;
@@ -125,23 +125,23 @@
 	}
 
 	.inlineCompletions-char-delete.single-line-inline { /* Editor Decoration */
-		border: 1px solid var(--vscode-editorHoverWidget-border);
+		border: 0.5px solid var(--vscode-editorHoverWidget-border);
 		margin: -2px 0 0 -2px;
 	}
 
 	.inlineCompletions-char-insert.single-line-inline { /* Inline Decoration */
-		border-top: 1px solid var(--vscode-inlineEdit-modifiedBorder); /* TODO: Do not set border inline but create overlaywidget (like deletion view) */
-		border-bottom: 1px solid var(--vscode-inlineEdit-modifiedBorder); /* TODO: Do not set border inline but create overlaywidget (like deletion view) */
+		border-top: 0.5px solid var(--vscode-inlineEdit-modifiedBorder); /* TODO: Do not set border inline but create overlaywidget (like deletion view) */
+		border-bottom: 0.5px solid var(--vscode-inlineEdit-modifiedBorder); /* TODO: Do not set border inline but create overlaywidget (like deletion view) */
 	}
 	.inlineCompletions-char-insert.single-line-inline.start {
 		border-top-left-radius: var(--inline-edit-border-radius);
 		border-bottom-left-radius: var(--inline-edit-border-radius);
-		border-left: 1px solid var(--vscode-inlineEdit-modifiedBorder); /* TODO: Do not set border inline but create overlaywidget (like deletion view) */
+		border-left: 0.5px solid var(--vscode-inlineEdit-modifiedBorder); /* TODO: Do not set border inline but create overlaywidget (like deletion view) */
 	}
 	.inlineCompletions-char-insert.single-line-inline.end {
 		border-top-right-radius: var(--inline-edit-border-radius);
 		border-bottom-right-radius: var(--inline-edit-border-radius);
-		border-right: 1px solid var(--vscode-inlineEdit-modifiedBorder); /* TODO: Do not set border inline but create overlaywidget (like deletion view) */
+		border-right: 0.5px solid var(--vscode-inlineEdit-modifiedBorder); /* TODO: Do not set border inline but create overlaywidget (like deletion view) */
 	}
 
 	.inlineCompletions-char-delete.single-line-inline.empty,

@@ -172,7 +172,7 @@
 }
 
 .extension-editor > .header > .details > .subtitle > .subtitle-entry:not(:empty):not(.last-non-empty) {
-	border-right: 1px solid rgba(128, 128, 128, 0.7);
+	border-right: 0.5px solid rgba(128, 128, 128, 0.7);
 	margin-right: 14px;
 	padding-right: 14px;
 }
@@ -375,7 +375,7 @@
 	font-size: 14px;
 	line-height: 36px;
 	padding-left: 20px;
-	border-bottom: 1px solid var(--vscode-panelSection-border);
+	border-bottom: 0.5px solid var(--vscode-panelSection-border);
 }
 
 .extension-editor > .body > .navbar > .monaco-action-bar > .actions-container {
@@ -397,7 +397,7 @@
 }
 
 .extension-editor > .body > .navbar > .monaco-action-bar > .actions-container > .action-item > .action-label.checked {
-	border-bottom: 1px solid var(--vscode-panelTitle-activeBorder);
+	border-bottom: 0.5px solid var(--vscode-panelTitle-activeBorder);
 	color: var(--vscode-panelTitle-activeForeground);
 }
 
@@ -473,7 +473,7 @@
 }
 
 .extension-editor > .body > .content > .details > .additional-details-container .additional-details-element:not(:last-child) {
-	border-bottom: 1px solid rgba(128, 128, 128, 0.22);
+	border-bottom: 0.5px solid rgba(128, 128, 128, 0.22);
 }
 
 .extension-editor > .body > .content > .details > .additional-details-container .additional-details-element > .additional-details-title {
@@ -483,7 +483,7 @@
 
 .extension-editor > .body > .content > .details > .additional-details-container .categories-container > .categories > .category {
 	display: inline-block;
-	border: 1px solid rgba(136, 136, 136, 0.45);
+	border: 0.5px solid rgba(136, 136, 136, 0.45);
 	padding: 2px 4px;
 	border-radius: 2px;
 	font-size: 90%;
@@ -578,8 +578,8 @@
 
 .extension-editor > .body > .content > .details > .content-container > .extension-pack-readme > .extension-pack > .extension-pack-content {
 	height: calc(100% - 34px);
-	border-top: 1px solid rgba(128, 128, 128, 0.22);
-	border-bottom: 1px solid rgba(128, 128, 128, 0.22);
+	border-top: 0.5px solid rgba(128, 128, 128, 0.22);
+	border-bottom: 0.5px solid rgba(128, 128, 128, 0.22);
 }
 
 .extension-editor > .body > .content > .details > .content-container > .extension-pack-readme > .extension-pack > .extension-pack-content > .monaco-scrollable-element {
@@ -614,7 +614,7 @@
 	margin-bottom: 10px;
 	font-weight: bold;
 	font-size: 120%;
-	border-bottom: 1px solid rgba(128, 128, 128, 0.22);
+	border-bottom: 0.5px solid rgba(128, 128, 128, 0.22);
 	padding: 3px 6px;
 	line-height: 22px;
 }

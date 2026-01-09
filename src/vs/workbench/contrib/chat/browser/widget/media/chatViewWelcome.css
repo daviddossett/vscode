@@ -41,7 +41,7 @@ div.chat-welcome-view {
 	padding: 12px;
 
 	& > .chat-welcome-view-icon .codicon {
-		color: var(--vscode-descriptionForeground);
+		color: var(--vscode-disabledForeground);
 		font-size: 40px;
 	}
 
@@ -66,16 +66,6 @@ div.chat-welcome-view {
 		-webkit-mask-size: 72px !important;
 		width: 72px;
 		height: 72px;
-	}
-
-	& > .chat-welcome-view-title {
-		font-size: 14px;
-		font-weight: 500;
-		margin-top: 24px;
-		margin-bottom: 8px;
-		text-align: center;
-		line-height: normal;
-		padding: 0 8px;
 	}
 
 	& > .chat-welcome-view-message {
@@ -198,7 +188,7 @@ div.chat-welcome-view {
 		border-radius: 4px;
 		background-color: var(--vscode-editorWidget-background);
 		cursor: pointer;
-		border: 1px solid var(--vscode-chat-requestBorder, var(--vscode-input-background, transparent));
+		border: 0.5px solid var(--vscode-chat-requestBorder, var(--vscode-input-background, transparent));
 		width: fit-content;
 		margin: 0;
 		box-sizing: border-box;

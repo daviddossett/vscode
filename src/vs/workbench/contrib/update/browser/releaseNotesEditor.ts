@@ -293,7 +293,7 @@ export class ReleaseNotesManager extends Disposable {
 					}
 
 					code:has(.codesetting):focus {
-						border: 1px solid var(--vscode-button-border, transparent);
+						border: 0.5px solid var(--vscode-button-border, transparent);
 					}
 
 					.codesetting {
@@ -313,7 +313,7 @@ export class ReleaseNotesManager extends Disposable {
 						font-size: 12px;
 						text-align: center;
 						cursor: pointer;
-						border: 1px solid var(--vscode-button-secondaryBorder, transparent);
+						border: 0.5px solid var(--vscode-button-secondaryBorder, transparent);
 						outline: 1px solid transparent;
 						line-height: 9px;
 						margin-bottom: -5px;

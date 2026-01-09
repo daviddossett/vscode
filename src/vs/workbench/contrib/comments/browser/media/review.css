@@ -98,7 +98,7 @@
 	margin: 0 7px 0 0;
 	width: 30px;
 	background-color: transparent;
-	border: 1px solid grey;
+	border: 0.5px solid grey;
 	border-radius: 3px;
 }
 
@@ -197,7 +197,7 @@
 }
 
 .review-widget .body .review-comment .review-comment-contents .comment-reactions .action-item a.action-label {
-	border: 1px solid;
+	border: 0.5px solid;
 	border-color: var(--vscode-panel-border);
 }
 
@@ -211,7 +211,7 @@
 
 .review-widget .body .review-comment .review-comment-contents .comment-reactions .action-item a.action-label:active {
 	background-color: var(--vscode-statusBarItem-activeBackground);
-	border: 1px solid transparent;
+	border: 0.5px solid transparent;
 }
 .review-widget .body .review-comment .review-comment-contents .comment-body a {
 	cursor: pointer;
@@ -284,7 +284,7 @@
 	margin-top: -1px;
 	margin-left: -1px;
 	word-wrap: break-word;
-	border: 1px solid var(--vscode-inputValidation-errorBorder);
+	border: 0.5px solid var(--vscode-inputValidation-errorBorder);
 	background: var(--vscode-inputValidation-errorBackground);
 }
 
@@ -298,7 +298,7 @@
 }
 
 .review-widget .body .comment-additional-actions .section-separator {
-	border-top: 1px solid var(--vscode-menu-separatorBackground);
+	border-top: 0.5px solid var(--vscode-menu-separatorBackground);
 	margin: 10px 0 14px;
 }
 
@@ -482,7 +482,7 @@
 }
 
 .monaco-editor .review-widget > .body {
-	border-top: 1px solid var(--comment-thread-state-color);
+	border-top: 0.5px solid var(--comment-thread-state-color);
 }
 
 .monaco-editor .review-widget > .head {
@@ -490,7 +490,7 @@
 }
 
 .review-widget > .body {
-	border-top: 1px solid;
+	border-top: 0.5px solid;
 	position: relative;
 }
 

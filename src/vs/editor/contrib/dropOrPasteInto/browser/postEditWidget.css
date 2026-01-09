@@ -5,7 +5,7 @@
 
 .post-edit-widget {
 	box-shadow: 0 0 8px 2px var(--vscode-widget-shadow);
-	border: 1px solid var(--vscode-widget-border, transparent);
+	border: 0.5px solid var(--vscode-widget-border, transparent);
 	border-radius: 4px;
 	color: var(--vscode-button-foreground);
 	background-color: var(--vscode-button-background);

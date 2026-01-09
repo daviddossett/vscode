@@ -114,7 +114,7 @@ export class LocalAgentsSessionsProvider extends Disposable implements IChatSess
 			label: chat.title,
 			description,
 			status: model ? this.modelToStatus(model) : this.chatResponseStateToStatus(chat.lastResponseState),
-			iconPath: Codicon.chatSparkle,
+			iconPath: Codicon.copilotLarge,
 			timing: chat.timing,
 			changes: chat.stats ? {
 				insertions: chat.stats.added,

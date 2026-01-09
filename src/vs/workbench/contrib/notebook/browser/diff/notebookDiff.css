@@ -342,29 +342,29 @@
 .notebook-text-diff-editor .cell-body .border-container .bottom-border,
 .notebook-text-diff-editor .cell-diff-editor-container .output-header-container,
 .notebook-text-diff-editor .cell-diff-editor-container .metadata-header-container {
-	border-top: 1px solid var(--vscode-notebook-cellBorderColor);
+	border-top: 0.5px solid var(--vscode-notebook-cellBorderColor);
 }
 
 .notebook-text-diff-editor .cell-body .border-container .left-border {
-	border-left: 1px solid var(--vscode-notebook-cellBorderColor);
+	border-left: 0.5px solid var(--vscode-notebook-cellBorderColor);
 }
 
 .notebook-text-diff-editor .cell-body .border-container .right-border {
-	border-right: 1px solid var(--vscode-notebook-cellBorderColor);
+	border-right: 0.5px solid var(--vscode-notebook-cellBorderColor);
 }
 
 /** Diff cell active borders */
 .notebook-text-diff-editor .monaco-list-row.focused .cell-body .border-container .top-border,
 .notebook-text-diff-editor .monaco-list-row.focused .cell-body .border-container .bottom-border {
-	border-top: 1px solid var(--vscode-notebook-focusedEditorBorder);
+	border-top: 0.5px solid var(--vscode-notebook-focusedEditorBorder);
 }
 
 .notebook-text-diff-editor .monaco-list-row.focused .cell-body .border-container .left-border {
-	border-left: 1px solid var(--vscode-notebook-focusedEditorBorder);
+	border-left: 0.5px solid var(--vscode-notebook-focusedEditorBorder);
 }
 
 .notebook-text-diff-editor .monaco-list-row.focused .cell-body .border-container .right-border {
-	border-right: 1px solid var(--vscode-notebook-focusedEditorBorder);
+	border-right: 0.5px solid var(--vscode-notebook-focusedEditorBorder);
 }
 
 /** Diff cell diff background */

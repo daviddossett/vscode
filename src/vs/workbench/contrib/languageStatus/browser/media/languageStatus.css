@@ -58,7 +58,7 @@
 }
 
 .monaco-workbench .hover-language-status:not(:last-child) {
-	border-bottom: 1px solid var(--vscode-notifications-border);
+	border-bottom: 0.5px solid var(--vscode-notifications-border);
 }
 
 .monaco-workbench .hover-language-status > .severity {

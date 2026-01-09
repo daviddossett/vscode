@@ -92,7 +92,7 @@ export class AiStatsStatusBar extends Disposable {
 						height: 6,
 
 						borderRadius: 6,
-						borderWidth: '1px',
+						borderWidth: '0.5px',
 						borderStyle: 'solid',
 					}
 				},
@@ -105,7 +105,7 @@ export class AiStatsStatusBar extends Disposable {
 							overflow: 'hidden',
 
 							borderRadius: 6,
-							border: '1px solid transparent',
+							border: '0.5px solid transparent',
 						}
 					}, [
 						n.div({

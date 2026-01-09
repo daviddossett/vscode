@@ -12,7 +12,7 @@
 	border-radius: 4px;
 	background-color: var(--vscode-editorWidget-background);
 	color: var(--vscode-editorWidget-foreground);
-	border: 1px solid var(--vscode-editorWidget-border);
+	border: 0.5px solid var(--vscode-editorWidget-border);
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 	pointer-events: none;
 	opacity: 0;

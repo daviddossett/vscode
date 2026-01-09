@@ -13,7 +13,7 @@
 	cursor: pointer;
 	justify-content: center;
 	align-items: center;
-	border: 1px solid var(--vscode-button-border, transparent);
+	border: 0.5px solid var(--vscode-button-border, transparent);
 	line-height: 16px;
 	font-size: 12px;
 }
@@ -102,7 +102,7 @@
 }
 
 .monaco-button-dropdown > .monaco-button.monaco-dropdown-button {
-	border: 1px solid var(--vscode-button-border, transparent);
+	border: 0.5px solid var(--vscode-button-border, transparent);
 	border-left-width: 0 !important;
 	border-radius: 0 4px 4px 0;
 	display: flex;
@@ -165,8 +165,8 @@
 
 .monaco-button-dropdown.default-colors .monaco-button-dropdown-separator {
 	background-color: var(--vscode-button-background);
-	border-top: 1px solid var(--vscode-button-border);
-	border-bottom: 1px solid var(--vscode-button-border);
+	border-top: 0.5px solid var(--vscode-button-border);
+	border-bottom: 0.5px solid var(--vscode-button-border);
 }
 
 .monaco-button-dropdown.default-colors .monaco-button.secondary + .monaco-button-dropdown-separator {

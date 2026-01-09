@@ -46,7 +46,7 @@
 .monaco-workbench .part.editor > .content .walkThroughContent h1 {
 	padding-bottom: 0.3em;
 	line-height: 1.2;
-	border-bottom-width: 1px;
+	border-bottom-width: 0.5px;
 	border-bottom-style: solid;
 	font-size: 40px;
 	margin-bottom: 15px;
@@ -78,7 +78,7 @@
 
 .monaco-workbench .part.editor > .content .walkThroughContent table > thead > tr > th {
 	text-align: left;
-	border-bottom: 1px solid;
+	border-bottom: 0.5px solid;
 }
 
 .monaco-workbench .part.editor > .content .walkThroughContent table > thead > tr > th,
@@ -89,7 +89,7 @@
 }
 
 .monaco-workbench .part.editor > .content .walkThroughContent table > tbody > tr + tr > td {
-	border-top: 1px solid;
+	border-top: 0.5px solid;
 }
 
 .monaco-workbench .part.editor > .content .walkThroughContent code,
@@ -133,7 +133,7 @@
 
 .monaco-workbench.hc-black .part.editor > .content .walkThroughContent .monaco-editor,
 .monaco-workbench.hc-light .part.editor > .content .walkThroughContent .monaco-editor {
-	border-width: 1px;
+	border-width: 0.5px;
 	border-style: solid;
 }
 
@@ -155,7 +155,7 @@
 	color: var(--vscode-textPreformat-foreground);
 	background-color: var(--vscode-textPreformat-background);
 	border-radius: 3px;
-	border: 1px solid var(--vscode-textPreformat-border);
+	border: 0.5px solid var(--vscode-textPreformat-border);
 }
 
 .monaco-workbench .part.editor > .content .walkThroughContent .monaco-editor {

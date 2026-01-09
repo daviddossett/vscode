@@ -22,7 +22,7 @@
 .monaco-editor .cursors-layer.cursor-block-outline-style > .cursor {
 	background: transparent !important;
 	border-style: solid;
-	border-width: 1px;
+	border-width: 0.5px;
 }
 
 /* -- underline-style -- */
@@ -34,7 +34,7 @@
 
 /* -- underline-thin-style -- */
 .monaco-editor .cursors-layer.cursor-underline-thin-style > .cursor {
-	border-bottom-width: 1px;
+	border-bottom-width: 0.5px;
 	border-bottom-style: solid;
 	background: transparent !important;
 }

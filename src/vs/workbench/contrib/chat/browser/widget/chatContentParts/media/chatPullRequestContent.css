@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 
 .chat-pull-request-content-part {
-	border: 1px solid var(--vscode-chat-requestBorder);
+	border: 0.5px solid var(--vscode-chat-requestBorder);
 	border-radius: 6px;
 	margin: 4px 0;
 	overflow: hidden;
@@ -31,7 +31,7 @@
 	.title-container {
 		display: flex;
 		padding: 8px 12px;
-		border-bottom: 1px solid var(--vscode-chat-requestBorder);
+		border-bottom: 0.5px solid var(--vscode-chat-requestBorder);
 	}
 
 	p {

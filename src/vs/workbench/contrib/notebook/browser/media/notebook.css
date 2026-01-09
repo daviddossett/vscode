@@ -353,17 +353,17 @@
 /** Notebook Cell Comments */
 
 .cell-comment-container.review-widget {
-	border-left: 1px solid var(--vscode-peekView-border); border-right: 1px solid var(--vscode-peekView-border);
+	border-left: 0.5px solid var(--vscode-peekView-border); border-right: 0.5px solid var(--vscode-peekView-border);
 	/* Restore text-wrap to default value to avoid inheriting nowrap from monaco-list. */
 	text-wrap: initial;
 }
 
 .cell-comment-container.review-widget > .head {
-	border-top: 1px solid var(--vscode-peekView-border);
+	border-top: 0.5px solid var(--vscode-peekView-border);
 }
 
 .cell-comment-container.review-widget > .body {
-	border-bottom: 1px solid var(--vscode-peekView-border);
+	border-bottom: 0.5px solid var(--vscode-peekView-border);
 }
 
 .cell-comment-container.review-widget {
@@ -504,14 +504,14 @@
 /* -- block-outline-style -- */
 .nb-cursor-block-outline-style {
 	width: 8px !important;
-	border-width: 1px;
+	border-width: 0.5px;
 	border-style: solid;
 	background: transparent;
 }
 /* -- underline-thin-style -- */
 .nb-cursor-underline-thin-style {
 	width: 8px !important;
-	border-bottom-width: 1px;
+	border-bottom-width: 0.5px;
 	border-bottom-style: solid;
 	background: transparent;
 }

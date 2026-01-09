@@ -96,7 +96,7 @@
 /* BEGIN: .merge-editor-block */
 
 .monaco-workbench .merge-editor .merge-editor-block:not(.handled):not(.focused) {
-	border: 1px solid var(--vscode-mergeEditor-conflict-unhandledUnfocused-border);
+	border: 0.5px solid var(--vscode-mergeEditor-conflict-unhandledUnfocused-border);
 }
 
 .monaco-workbench .merge-editor .merge-editor-block:not(.handled).focused {
@@ -104,11 +104,11 @@
 }
 
 .monaco-workbench .merge-editor .merge-editor-block.handled:not(.focused) {
-	border: 1px solid var(--vscode-mergeEditor-conflict-handledUnfocused-border);
+	border: 0.5px solid var(--vscode-mergeEditor-conflict-handledUnfocused-border);
 }
 
 .monaco-workbench .merge-editor .merge-editor-block.handled.focused {
-	border: 1px solid var(--vscode-mergeEditor-conflict-handledFocused-border);
+	border: 0.5px solid var(--vscode-mergeEditor-conflict-handledFocused-border);
 }
 
 .monaco-workbench .merge-editor .merge-editor-simplified.input.i1, .merge-editor-block.use-simplified-decorations.input.i1 {
@@ -160,19 +160,19 @@
 
 
 .focused .accept-conflict-group.monaco-custom-toggle {
-	border: 1px solid var(--vscode-mergeEditor-conflict-unhandledFocused-border);
+	border: 0.5px solid var(--vscode-mergeEditor-conflict-unhandledFocused-border);
 }
 
 .accept-conflict-group.monaco-custom-toggle {
-	border: 1px solid var(--vscode-mergeEditor-conflict-unhandledUnfocused-border);
+	border: 0.5px solid var(--vscode-mergeEditor-conflict-unhandledUnfocused-border);
 }
 
 .handled.focused .accept-conflict-group.monaco-custom-toggle {
-	border: 1px solid var(--vscode-mergeEditor-conflict-handledFocused-border);
+	border: 0.5px solid var(--vscode-mergeEditor-conflict-handledFocused-border);
 }
 
 .handled .accept-conflict-group.monaco-custom-toggle {
-	border: 1px solid var(--vscode-checkbox-border);
+	border: 0.5px solid var(--vscode-checkbox-border);
 }
 
 .merge-accept-gutter-marker.multi-line .background {
@@ -204,7 +204,7 @@
 
 .conflict-zone-root {
 	background-color: var(--vscode-mergeEditor-change-background);
-	border: 1px solid var(--vscode-mergeEditor-conflict-unhandledUnfocused-border);
+	border: 0.5px solid var(--vscode-mergeEditor-conflict-unhandledUnfocused-border);
 	height: 90%;
 	display: flex;
 	align-items: center;
@@ -233,7 +233,7 @@
 
 
 .focused.conflict-zone .conflict-zone-root {
-	border: 1px solid var(--vscode-mergeEditor-conflict-unhandledFocused-border);
+	border: 0.5px solid var(--vscode-mergeEditor-conflict-unhandledFocused-border);
 }
 
 .merge-editor-conflict-actions {

@@ -247,14 +247,14 @@ export class RenameWidget implements IRenameWidget, IContentWidget, IDisposable 
 		const widgetBorderColor = theme.getColor(widgetBorder);
 		this._domNode.style.backgroundColor = String(theme.getColor(editorWidgetBackground) ?? '');
 		this._domNode.style.boxShadow = widgetShadowColor ? ` 0 0 8px 2px ${widgetShadowColor}` : '';
-		this._domNode.style.border = widgetBorderColor ? `1px solid ${widgetBorderColor}` : '';
+		this._domNode.style.border = widgetBorderColor ? `0.5px solid ${widgetBorderColor}` : '';
 		this._domNode.style.color = String(theme.getColor(inputForeground) ?? '');
 
 		const border = theme.getColor(inputBorder);
 
 		this._inputWithButton.domNode.style.backgroundColor = String(theme.getColor(inputBackground) ?? '');
 		this._inputWithButton.input.style.backgroundColor = String(theme.getColor(inputBackground) ?? '');
-		this._inputWithButton.domNode.style.borderWidth = border ? '1px' : '0px';
+		this._inputWithButton.domNode.style.borderWidth = border ? '0.5px' : '0px';
 		this._inputWithButton.domNode.style.borderStyle = border ? 'solid' : 'none';
 		this._inputWithButton.domNode.style.borderColor = border?.toString() ?? 'none';
 	}

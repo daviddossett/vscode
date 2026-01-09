@@ -31,11 +31,11 @@
 }
 
 .monaco-workbench .pane-composite-part:not(.empty) > .header {
-	border-bottom: 1px solid var(--vscode-sideBarActivityBarTop-border);
+	border-bottom: 0.5px solid var(--vscode-sideBarActivityBarTop-border);
 }
 
 .monaco-workbench .pane-composite-part:not(.empty) > .footer {
-	border-top: 1px solid var(--vscode-sideBarActivityBarTop-border);
+	border-top: 0.5px solid var(--vscode-sideBarActivityBarTop-border);
 }
 
 .monaco-workbench .pane-composite-part > .title > .composite-bar-container,
@@ -292,7 +292,7 @@
 	bottom: 2px;
 	width: 100%;
 	height: 0;
-	border-top-width: 1px;
+	border-top-width: 0.5px;
 	border-top-style: solid;
 }
 

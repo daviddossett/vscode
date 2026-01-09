@@ -410,7 +410,7 @@ registerThemingParticipant((theme, collector) => {
 			}
 			collector.addRule(`.monaco-editor .cursors-layer ${cursorTheme.class} { background-color: ${caret}; border-color: ${caret}; color: ${caretBackground}; }`);
 			if (isHighContrast(theme.type)) {
-				collector.addRule(`.monaco-editor .cursors-layer.has-selection ${cursorTheme.class} { border-left: 1px solid ${caretBackground}; border-right: 1px solid ${caretBackground}; }`);
+				collector.addRule(`.monaco-editor .cursors-layer.has-selection ${cursorTheme.class} { border: 0.5px solid ${caretBackground}; border: 0.5px solid ${caretBackground}; }`);
 			}
 		}
 	}

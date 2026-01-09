@@ -232,7 +232,7 @@
 	align-items: center;
 	margin: 5px 0px 2px 0px;
 	font-weight: bold;
-	border-bottom: 1px solid transparent;
+	border-bottom: 0.5px solid transparent;
 }
 
 .profiles-editor .profile-associations-table .monaco-table-th,

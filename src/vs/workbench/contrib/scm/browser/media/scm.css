@@ -391,7 +391,7 @@
 	display: flex;
 	align-items: flex-start;
 	box-sizing: border-box;
-	border: 1px solid var(--vscode-input-border, transparent);
+	border: 0.5px solid var(--vscode-input-border, transparent);
 	background-color: var(--vscode-input-background);
 	border-radius: 4px;
 }
@@ -468,7 +468,7 @@
 .scm-editor-validation-container {
 	display: flex;
 	box-sizing: border-box;
-	border-width: 1px;
+	border-width: 0.5px;
 	border-style: solid;
 	border-top: none;
 	border-bottom-left-radius: 2px;
@@ -599,7 +599,7 @@
 .scm-repositories-view .scm-artifact .timestamp-container.duplicate {
 	height: 22px;
 	min-width: 6px;
-	border-left: 1px solid currentColor;
+	border-left: 0.5px solid currentColor;
 	opacity: 0.25;
 
 	.timestamp {
@@ -676,7 +676,7 @@
 .pane-header .scm-graph-view-badge-container > .scm-graph-view-badge.monaco-count-badge.long {
 	background-color: var(--vscode-badge-background);
 	color: var(--vscode-badge-foreground);
-	border: 1px solid var(--vscode-contrastBorder);
+	border: 0.5px solid var(--vscode-contrastBorder);
 	margin: 0 6px;
 	padding: 2px 4px;
 }

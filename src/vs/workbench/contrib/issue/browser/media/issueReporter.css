@@ -26,7 +26,7 @@
 
 .issue-reporter-body th {
 	vertical-align: bottom;
-	border-bottom: 1px solid;
+	border-bottom: 0.5px solid;
 	padding: 5px;
 	text-align: inherit;
 }
@@ -269,7 +269,7 @@ body.issue-reporter-body  {
 .issue-reporter-body .issue-reporter select,
 .issue-reporter-body .issue-reporter input,
 .issue-reporter-body .issue-reporter textarea {
-	border: 1px solid transparent;
+	border: 0.5px solid transparent;
 	margin-top: 10px;
 }
 
@@ -310,7 +310,7 @@ body.issue-reporter-body  {
 .issue-reporter-body a,
 .issue-reporter-body .workbenchCommand {
 	cursor: pointer;
-	border: 1px solid transparent;
+	border: 0.5px solid transparent;
 	color: var(--vscode-textLink-foreground);
 }
 
@@ -496,7 +496,7 @@ body.issue-reporter-body  {
 .issue-reporter-body .issue-reporter input[type="text"],
 .issue-reporter-body .issue-reporter textarea,
 .issue-reporter-body .issue-reporter select {
-	border: 1px solid var(--vscode-input-border)
+	border: 0.5px solid var(--vscode-input-border)
 }
 
 .issue-reporter-body .issue-reporter input[type='text']:focus,
@@ -506,14 +506,14 @@ body.issue-reporter-body  {
 .issue-reporter-body .issue-reporter button:focus,
 .issue-reporter-body .issue-reporter a:focus,
 .issue-reporter-body .issue-reporter .workbenchCommand:focus {
-	border: 1px solid var(--vscode-inputOption-activeBorder);
+	border: 0.5px solid var(--vscode-inputOption-activeBorder);
 	outline-style: none;
 }
 
 .issue-reporter-body .invalid-input,
 .issue-reporter-body .invalid-input:focus,
 .issue-reporter-body .validation-error {
-	border: 1px solid var(--vscode-inputValidation-errorBorder) !important
+	border: 0.5px solid var(--vscode-inputValidation-errorBorder) !important
 }
 
 .issue-reporter-body .required-input {

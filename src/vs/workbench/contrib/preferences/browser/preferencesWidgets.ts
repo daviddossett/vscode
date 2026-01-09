@@ -412,7 +412,7 @@ export class SearchWidget extends Widget {
 
 			this.countElement.style.backgroundColor = asCssVariable(badgeBackground);
 			this.countElement.style.color = asCssVariable(badgeForeground);
-			this.countElement.style.border = `1px solid ${asCssVariable(contrastBorder)}`;
+			this.countElement.style.border = `0.5px solid ${asCssVariable(contrastBorder)}`;
 		}
 
 		this.inputBox.inputElement.setAttribute('aria-live', this.options.ariaLive || 'off');

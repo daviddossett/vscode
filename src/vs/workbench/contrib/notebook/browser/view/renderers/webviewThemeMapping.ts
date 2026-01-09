@@ -65,7 +65,7 @@ const mapping: ReadonlyMap<string, string> = new Map([
 ]);
 
 const constants: Readonly<WebviewStyles> = {
-	'theme-input-border-width': '1px',
+	'theme-input-border-width': '0.5px',
 	'theme-button-primary-hover-shadow': 'none',
 	'theme-button-secondary-hover-shadow': 'none',
 	'theme-input-border-color': 'transparent',

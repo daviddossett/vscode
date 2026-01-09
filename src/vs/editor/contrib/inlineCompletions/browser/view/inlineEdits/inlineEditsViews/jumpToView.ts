@@ -153,7 +153,7 @@ export class JumpToView extends Disposable {
 					height: '100%',
 					backgroundColor: this._styles.map(s => s.background),
 					['--vscodeIconForeground' as string]: this._styles.map(s => s.foreground),
-					border: this._styles.map(s => `1px solid ${s.border}`),
+					border: this._styles.map(s => `0.5px solid ${s.border}`),
 					borderRadius: '3px',
 					boxSizing: 'border-box',
 					fontSize: '11px',

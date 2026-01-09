@@ -35,7 +35,7 @@
 }
 
 .monaco-workbench.vs .settings-editor > .settings-header > .search-container > .suggest-input-container {
-	border: 1px solid #ddd;
+	border: 0.5px solid #ddd;
 }
 
 .settings-editor > .settings-header > .search-container > .search-container-widgets {
@@ -151,7 +151,7 @@
 
 .settings-editor > .settings-header > .settings-header-controls .settings-tabs-widget > .monaco-action-bar .action-item .action-label:not(.checked):not(:focus) {
 	/* Still maintain a border for alignment, but keep it transparent */
-	border-bottom: 1px solid transparent;
+	border-bottom: 0.5px solid transparent;
 }
 
 .settings-editor > .settings-body {
@@ -609,7 +609,7 @@
 	background-color: var(--vscode-textPreformat-background);
 	padding: 1px 3px;
 	border-radius: 4px;
-	border: 1px solid var(--vscode-textPreformat-border);
+	border: 0.5px solid var(--vscode-textPreformat-border);
 }
 
 .settings-editor > .settings-body .settings-tree-container .setting-item-contents .setting-item-markdown .monaco-tokenized-source {
@@ -638,7 +638,7 @@
 .settings-editor > .settings-body .settings-tree-container .setting-item-bool .setting-value-checkbox {
 	height: 18px;
 	width: 18px;
-	border: 1px solid transparent;
+	border: 0.5px solid transparent;
 	border-radius: 3px;
 	margin-right: 9px;
 	margin-left: 0px;

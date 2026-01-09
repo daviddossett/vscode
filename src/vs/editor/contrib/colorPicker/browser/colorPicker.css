@@ -76,7 +76,7 @@
 .standalone-colorpicker {
 	color: var(--vscode-editorHoverWidget-foreground);
 	background-color: var(--vscode-editorHoverWidget-background);
-	border: 1px solid var(--vscode-editorHoverWidget-border);
+	border: 0.5px solid var(--vscode-editorHoverWidget-border);
 }
 
 .colorpicker-header.standalone-colorpicker {
@@ -86,7 +86,7 @@
 .colorpicker-header .close-button {
 	cursor: pointer;
 	background-color: var(--vscode-editorHoverWidget-background);
-	border-left: 1px solid var(--vscode-editorHoverWidget-border);
+	border-left: 0.5px solid var(--vscode-editorHoverWidget-border);
 }
 
 .colorpicker-header .close-button-inner-div {
@@ -128,7 +128,7 @@
 	width: 9px;
 	height: 9px;
 	margin: -5px 0 0 -5px;
-	border: 1px solid rgb(255, 255, 255);
+	border: 0.5px solid rgb(255, 255, 255);
 	border-radius: 100%;
 	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);
 	position: absolute;
@@ -171,7 +171,7 @@
 	width: calc(100% + 4px);
 	height: 4px;
 	box-sizing: border-box;
-	border: 1px solid rgba(255, 255, 255, 0.71);
+	border: 0.5px solid rgba(255, 255, 255, 0.71);
 	box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.85);
 }
 
@@ -187,8 +187,8 @@
 
 .standalone-colorpicker-body {
 	display: block;
-	border: 1px solid transparent;
-	border-bottom: 1px solid var(--vscode-editorHoverWidget-border);
+	border: 0.5px solid transparent;
+	border-bottom: 0.5px solid var(--vscode-editorHoverWidget-border);
 	overflow: hidden;
 }
 

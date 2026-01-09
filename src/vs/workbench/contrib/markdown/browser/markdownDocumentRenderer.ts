@@ -57,7 +57,7 @@ hr {
 h1 {
 	padding-bottom: 0.3em;
 	line-height: 1.2;
-	border-bottom-width: 1px;
+	border: 0.5px;
 	border-bottom-style: solid;
 }
 
@@ -71,7 +71,7 @@ table {
 
 th {
 	text-align: left;
-	border-bottom: 1px solid;
+	border: 0.5px solid;
 }
 
 th,
@@ -80,7 +80,7 @@ td {
 }
 
 table > tbody > tr + tr > td {
-	border-top-width: 1px;
+	border: 0.5px;
 	border-top-style: solid;
 }
 

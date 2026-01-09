@@ -445,7 +445,7 @@ export class KeybindingsEditor extends EditorPane<IKeybindingsEditorMemento> imp
 
 		recordingBadge.style.backgroundColor = asCssVariable(badgeBackground);
 		recordingBadge.style.color = asCssVariable(badgeForeground);
-		recordingBadge.style.border = `1px solid ${asCssVariable(contrastBorder)}`;
+		recordingBadge.style.border = `0.5px solid ${asCssVariable(contrastBorder)}`;
 
 		return recordingBadge;
 	}

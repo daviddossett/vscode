@@ -137,8 +137,8 @@ export class StartDebugActionViewItem extends BaseActionViewItem {
 				event.preventDefault();
 			}
 		}));
-		this.container.style.border = `1px solid ${asCssVariable(selectBorder)}`;
-		selectBoxContainer.style.borderLeft = `1px solid ${asCssVariable(selectBorder)}`;
+		this.container.style.border = `0.5px solid ${asCssVariable(selectBorder)}`;
+		selectBoxContainer.style.borderLeft = `0.5px solid ${asCssVariable(selectBorder)}`;
 		this.container.style.backgroundColor = asCssVariable(selectBackground);
 
 		const configManager = this.debugService.getConfigurationManager();

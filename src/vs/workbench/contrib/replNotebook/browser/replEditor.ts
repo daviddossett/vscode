@@ -244,14 +244,14 @@ export class ReplEditor extends EditorPane implements IEditorPaneWithScrolling {
 					top: ${INPUT_CELL_VERTICAL_PADDING}px;
 				}
 				.interactive-editor .input-cell-container {
-					border-top: 1px solid var(--vscode-notebook-inactiveFocusedCellBorder);
+					border: 0.5px solid var(--vscode-notebook-inactiveFocusedCellBorder);
 				}
 			`);
 		} else {
 			// border
 			styleSheets.push(`
 				.interactive-editor .input-cell-container {
-					border-top: 1px solid var(--vscode-notebook-inactiveFocusedCellBorder);
+					border: 0.5px solid var(--vscode-notebook-inactiveFocusedCellBorder);
 				}
 				.interactive-editor .input-cell-container .input-focus-indicator {
 					display: none;

@@ -157,7 +157,7 @@ class HtmlHorizontalOffsetRangeVisualizer implements IVisualizationEffect {
 		label.style.fontSize = '10px';
 		label.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
 		label.style.padding = '1px 3px';
-		label.style.border = '1px solid green';
+		label.style.border = '0.5px solid green';
 		label.style.borderRadius = '2px';
 		label.style.whiteSpace = 'nowrap';
 		label.style.boxShadow = '0 1px 2px rgba(0,0,0,0.15)';
@@ -209,7 +209,7 @@ class HtmlRectVisualizer implements IVisualizationEffect {
 	visualize(): IDisposable {
 		const div = document.createElement('div');
 		div.style.position = 'fixed';
-		div.style.border = '1px solid red';
+		div.style.border = '0.5px solid red';
 		div.style.boxSizing = 'border-box';
 		div.style.pointerEvents = 'none';
 		div.style.zIndex = '100000';

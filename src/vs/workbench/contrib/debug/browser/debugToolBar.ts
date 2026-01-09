@@ -266,10 +266,10 @@ export class DebugToolBar extends Themable implements IWorkbenchContribution {
 			const borderColor = this.getColor(debugToolBarBorder);
 
 			if (contrastBorderColor) {
-				this.$el.style.border = `1px solid ${contrastBorderColor}`;
+				this.$el.style.border = `0.5px solid ${contrastBorderColor}`;
 			} else {
 				this.$el.style.border = borderColor ? `solid ${borderColor}` : 'none';
-				this.$el.style.border = '1px 0';
+				this.$el.style.border = '0.5px 0';
 			}
 		}
 	}

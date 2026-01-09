@@ -307,7 +307,7 @@ export class SuggestEnabledInput extends Widget {
 		this.stylingContainer.style.backgroundColor = asCssVariable(styleOverrides.inputBackground ?? inputBackground);
 		this.stylingContainer.style.color = asCssVariable(styleOverrides.inputForeground ?? inputForeground);
 		this.placeholderText.style.color = asCssVariable(styleOverrides.inputPlaceholderForeground ?? inputPlaceholderForeground);
-		this.stylingContainer.style.borderWidth = '1px';
+		this.stylingContainer.style.borderWidth = '0.5px';
 		this.stylingContainer.style.borderStyle = 'solid';
 		this.stylingContainer.style.borderColor = asCssVariableWithDefault(styleOverrides.inputBorder ?? inputBorder, 'transparent');
 

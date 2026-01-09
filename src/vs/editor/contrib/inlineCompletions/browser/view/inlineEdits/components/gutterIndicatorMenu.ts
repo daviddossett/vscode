@@ -279,7 +279,7 @@ function separator() {
 		}
 	}, n.div({
 		style: {
-			borderBottom: `1px solid ${asCssVariable(editorHoverBorder)}`,
+			borderBottom: `0.5px solid ${asCssVariable(editorHoverBorder)}`,
 		}
 	}));
 }

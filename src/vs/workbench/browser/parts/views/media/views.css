@@ -162,7 +162,7 @@
 
 .customview-tree .monaco-list .monaco-list-row.selected .custom-view-tree-node-item .custom-view-tree-node-item-checkbox {
 	background-color: var(--vscode-checkbox-selectBackground);
-	border: 1px solid var(--vscode-checkbox-selectBorder);
+	border: 0.5px solid var(--vscode-checkbox-selectBorder);
 }
 
 .customview-tree .monaco-list .monaco-list-row .custom-view-tree-node-item .custom-view-tree-node-item-checkbox {
@@ -170,7 +170,7 @@
 	height: 16px;
 	margin: 3px 6px 3px 0px;
 	padding: 0px;
-	border: 1px solid var(--vscode-checkbox-border);
+	border: 0.5px solid var(--vscode-checkbox-border);
 	opacity: 1;
 	background-color: var(--vscode-checkbox-background);
 }
@@ -336,6 +336,6 @@
 .viewpane-filter > .viewpane-filter-controls .monaco-action-bar .monaco-dropdown .action-label.codicon.codicon-filter.checked {
 	color: var(--vscode-inputOption-activeForeground);
 	background-color: var(--vscode-inputOption-activeBackground);
-	border: 1px solid var(--vscode-inputOption-activeBorder);
+	border: 0.5px solid var(--vscode-inputOption-activeBorder);
 	padding: 1px;
 }

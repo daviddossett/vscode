@@ -256,8 +256,8 @@ registerThemingParticipant((theme, collector) => {
 			collector.addRule(`.monaco-editor .view-overlays .current-line-exact { border: 2px solid ${lineHighlightBorder}; }`);
 			collector.addRule(`.monaco-editor .margin-view-overlays .current-line-exact-margin { border: 2px solid ${lineHighlightBorder}; }`);
 			if (isHighContrast(theme.type)) {
-				collector.addRule(`.monaco-editor .view-overlays .current-line-exact { border-width: 1px; }`);
-				collector.addRule(`.monaco-editor .margin-view-overlays .current-line-exact-margin { border-width: 1px; }`);
+				collector.addRule(`.monaco-editor .view-overlays .current-line-exact { border: 0.5px; }`);
+				collector.addRule(`.monaco-editor .margin-view-overlays .current-line-exact-margin { border: 0.5px; }`);
 			}
 		}
 	}

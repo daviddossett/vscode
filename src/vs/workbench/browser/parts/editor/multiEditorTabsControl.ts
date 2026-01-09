@@ -1744,7 +1744,7 @@ export class MultiEditorTabsControl extends EditorTabsControl {
 
 		// Borders / Outline
 		const borderRightColor = ((isTabLastSticky && showLastStickyTabBorderColor ? this.getColor(TAB_LAST_PINNED_BORDER) : undefined) || this.getColor(TAB_BORDER) || this.getColor(contrastBorder));
-		tabContainer.style.borderRight = borderRightColor ? `1px solid ${borderRightColor}` : '';
+		tabContainer.style.borderRight = borderRightColor ? `0.5px solid ${borderRightColor}` : '';
 		tabContainer.style.outlineColor = this.getColor(activeContrastBorder) || '';
 	}
 
@@ -2310,7 +2310,7 @@ registerThemingParticipant((theme, collector) => {
 	if (borderColor) {
 		collector.addRule(`
 			.monaco-workbench .part.editor > .content .editor-group-container > .title > .tabs-and-actions-container.wrapping .tabs-container > .tab {
-				border-bottom: 1px solid ${borderColor};
+				border: 0.5px solid ${borderColor};
 			}
 		`);
 	}

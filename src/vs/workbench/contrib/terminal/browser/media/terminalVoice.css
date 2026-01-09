@@ -42,6 +42,6 @@
 .terminal-voice-progress-text {
 	font-style: italic;
 	color: var(--vscode-editorGhostText-foreground) !important;
-	border: 1px solid var(--vscode-editorGhostText-border);
+	border: 0.5px solid var(--vscode-editorGhostText-border);
 	z-index: 1000;
 }

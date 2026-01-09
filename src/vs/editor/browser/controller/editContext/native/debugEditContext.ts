@@ -163,7 +163,7 @@ function createDiv(text: string, selectionStart: number, selectionEnd: number) {
 	ret.style.bottom = '50px';
 	ret.style.left = '60px';
 	ret.style.backgroundColor = 'white';
-	ret.style.border = '1px solid black';
+	ret.style.border = '0.5px solid black';
 	ret.style.padding = '5px';
 	ret.style.whiteSpace = 'pre';
 	ret.style.font = '12px monospace';

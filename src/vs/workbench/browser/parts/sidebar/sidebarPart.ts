@@ -142,10 +142,10 @@ export class SidebarPart extends AbstractPaneCompositePart {
 
 		const borderColor = this.getColor(SIDE_BAR_BORDER) || this.getColor(contrastBorder);
 		const isPositionLeft = this.layoutService.getSideBarPosition() === SideBarPosition.LEFT;
-		container.style.borderRightWidth = borderColor && isPositionLeft ? '1px' : '';
+		container.style.borderRightWidth = borderColor && isPositionLeft ? '0.5px' : '';
 		container.style.borderRightStyle = borderColor && isPositionLeft ? 'solid' : '';
 		container.style.borderRightColor = isPositionLeft ? borderColor || '' : '';
-		container.style.borderLeftWidth = borderColor && !isPositionLeft ? '1px' : '';
+		container.style.borderLeftWidth = borderColor && !isPositionLeft ? '0.5px' : '';
 		container.style.borderLeftStyle = borderColor && !isPositionLeft ? 'solid' : '';
 		container.style.borderLeftColor = !isPositionLeft ? borderColor || '' : '';
 		container.style.outlineColor = this.getColor(SIDE_BAR_DRAG_AND_DROP_BACKGROUND) ?? '';
@@ -161,6 +161,13 @@ export class SidebarPart extends AbstractPaneCompositePart {
 
 	protected override getTitleAreaDropDownAnchorAlignment(): AnchorAlignment {
 		return this.layoutService.getSideBarPosition() === SideBarPosition.LEFT ? AnchorAlignment.LEFT : AnchorAlignment.RIGHT;
+	}
+
+	protected override createTitleArea(parent: HTMLElement): HTMLElement {
+		const titleArea = super.createTitleArea(parent);
+		// Hide the title area for the primary sidebar - chat is the only permanent view
+		titleArea.style.display = 'none';
+		return titleArea;
 	}
 
 	protected override createCompositeBar(): ActivityBarCompositeBar {
@@ -206,16 +213,13 @@ export class SidebarPart extends AbstractPaneCompositePart {
 	}
 
 	protected shouldShowCompositeBar(): boolean {
-		const activityBarPosition = this.configurationService.getValue<ActivityBarPosition>(LayoutSettings.ACTIVITY_BAR_LOCATION);
-		return activityBarPosition === ActivityBarPosition.TOP || activityBarPosition === ActivityBarPosition.BOTTOM;
+		// Hide activity bar on primary sidebar - only show on secondary sidebar
+		return false;
 	}
 
 	private shouldShowActivityBar(): boolean {
-		if (this.shouldShowCompositeBar()) {
-			return false;
-		}
-
-		return this.configurationService.getValue(LayoutSettings.ACTIVITY_BAR_LOCATION) !== ActivityBarPosition.HIDDEN;
+		// Hide activity bar on primary sidebar - only show on secondary sidebar
+		return false;
 	}
 
 	protected getCompositeBarPosition(): CompositeBarPosition {

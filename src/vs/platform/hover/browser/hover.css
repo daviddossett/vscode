@@ -14,7 +14,7 @@
 	overflow: hidden;
 	max-width: 700px;
 	background: var(--vscode-editorHoverWidget-background);
-	border: 1px solid var(--vscode-editorHoverWidget-border);
+	border: 0.5px solid var(--vscode-editorHoverWidget-border);
 	border-radius: 5px;
 	color: var(--vscode-editorHoverWidget-foreground);
 	box-shadow: 0 2px 8px var(--vscode-widget-shadow);
@@ -64,8 +64,8 @@
 	width: 5px;
 	height: 5px;
 	background-color: var(--vscode-editorHoverWidget-background);
-	border-right: 1px solid var(--vscode-editorHoverWidget-border);
-	border-bottom: 1px solid var(--vscode-editorHoverWidget-border);
+	border-right: 0.5px solid var(--vscode-editorHoverWidget-border);
+	border-bottom: 0.5px solid var(--vscode-editorHoverWidget-border);
 }
 .workbench-hover-container:not(:focus-within).locked .workbench-hover-pointer:after {
 	width: 4px;
@@ -74,8 +74,8 @@
 	border-bottom-width: 2px;
 }
 .workbench-hover-container:focus-within .workbench-hover-pointer:after {
-	border-right: 1px solid var(--vscode-focusBorder);
-	border-bottom: 1px solid var(--vscode-focusBorder);
+	border-right: 0.5px solid var(--vscode-focusBorder);
+	border-bottom: 0.5px solid var(--vscode-focusBorder);
 }
 
 .workbench-hover-pointer.left   { left: -3px; }

@@ -175,7 +175,7 @@
 }
 
 .interactive-item-container .header .monaco-toolbar .action-label {
-	border: 1px solid transparent;
+	border: 0.5px solid transparent;
 	padding: 2px;
 }
 
@@ -293,7 +293,7 @@
 .interactive-item-container .value .rendered-markdown table,
 .interactive-item-container .value .rendered-markdown table td,
 .interactive-item-container .value .rendered-markdown table th {
-	border: 1px solid var(--vscode-chat-requestBorder);
+	border: 0.5px solid var(--vscode-chat-requestBorder);
 	border-collapse: collapse;
 	padding: 4px 6px;
 }
@@ -523,7 +523,7 @@
 	}
 
 	.tool-output-part {
-		border: 1px solid var(--vscode-widget-border);
+		border: 0.5px solid var(--vscode-widget-border);
 		border-radius: 6px;
 		background: var(--vscode-editor-background);
 		margin: 4px 0;
@@ -532,7 +532,7 @@
 		.output-title {
 			padding: 8px 12px;
 			background: var(--vscode-editorWidget-background);
-			border-bottom: 1px solid var(--vscode-widget-border);
+			border-bottom: 0.5px solid var(--vscode-widget-border);
 			font-size: var(--vscode-chat-font-size-body-m);
 		}
 
@@ -627,7 +627,7 @@ have to be updated for changes to the rules above, or to support more deeply nes
 		background-color: var(--vscode-textPreformat-background);
 		padding: 1px 3px;
 		border-radius: 4px;
-		border: 1px solid var(--vscode-textPreformat-border);
+		border: 0.5px solid var(--vscode-textPreformat-border);
 		white-space: pre-wrap;
 	}
 }
@@ -752,7 +752,7 @@ have to be updated for changes to the rules above, or to support more deeply nes
 	box-sizing: border-box;
 	cursor: text;
 	background-color: var(--vscode-input-background);
-	border: 1px solid var(--vscode-input-border, transparent);
+	border: 0.5px solid var(--vscode-input-border, transparent);
 	border-radius: 4px;
 	padding: 0 6px 6px 6px;
 	/* top padding is inside the editor widget */
@@ -779,7 +779,7 @@ have to be updated for changes to the rules above, or to support more deeply nes
 	padding: 4px 3px 4px 3px;
 	box-sizing: border-box;
 	background-color: var(--vscode-editor-background);
-	border: 1px solid var(--vscode-input-border, transparent);
+	border: 0.5px solid var(--vscode-input-border, transparent);
 	border-bottom: none;
 	border-radius: 4px 4px 0 0;
 	display: flex;
@@ -978,7 +978,7 @@ have to be updated for changes to the rules above, or to support more deeply nes
 .chat-related-files .monaco-button-dropdown {
 	border-radius: 4px;
 	height: 18px;
-	border: 1px solid var(--vscode-input-border);
+	border: 0.5px solid var(--vscode-input-border);
 	border-style: dashed;
 	align-items: center;
 	overflow: hidden;
@@ -1039,7 +1039,7 @@ have to be updated for changes to the rules above, or to support more deeply nes
 
 .interactive-session .chat-editing-session .chat-editing-session-actions .monaco-button.secondary.monaco-text-button {
 	background-color: var(--vscode-button-secondaryBackground);
-	border: 1px solid var(--vscode-button-border);
+	border: 0.5px solid var(--vscode-button-border);
 	color: var(--vscode-button-secondaryForeground);
 }
 
@@ -1071,13 +1071,13 @@ have to be updated for changes to the rules above, or to support more deeply nes
 
 .interactive-session .chat-editing-session .chat-editing-session-toolbar-actions .monaco-button-dropdown.sidebyside-button .monaco-button,
 .interactive-session .chat-editing-session .chat-editing-session-toolbar-actions .monaco-button-dropdown.sidebyside-button .monaco-button:hover {
-	border-right: 1px solid transparent;
+	border-right: 0.5px solid transparent;
 	background-color: unset;
 	padding: 0;
 }
 
 .interactive-session .chat-editing-session .chat-editing-session-toolbar-actions .monaco-button-dropdown.sidebyside-button > .separator {
-	border-right: 1px solid transparent;
+	border-right: 0.5px solid transparent;
 	padding: 0 1px;
 	height: 22px;
 }
@@ -1107,7 +1107,7 @@ have to be updated for changes to the rules above, or to support more deeply nes
 .interactive-session .interactive-input-part > .chat-todo-list-widget-container .chat-todo-list-widget {
 	padding: 4px 3px 4px 3px;
 	box-sizing: border-box;
-	border: 1px solid var(--vscode-input-border, transparent);
+	border: 0.5px solid var(--vscode-input-border, transparent);
 	background-color: var(--vscode-editor-background);
 	border-bottom: none;
 	border-top-left-radius: 4px;
@@ -1441,7 +1441,7 @@ have to be updated for changes to the rules above, or to support more deeply nes
 .monaco-editor .chat-editing-last-edit {
 	background-color: var(--vscode-editor-rangeHighlightBackground);
 	box-sizing: border-box;
-	border: 1px solid var(--vscode-editor-rangeHighlightBorder);
+	border: 0.5px solid var(--vscode-editor-rangeHighlightBorder);
 }
 
 @property --chat-editing-last-edit-shift {
@@ -1584,7 +1584,7 @@ have to be updated for changes to the rules above, or to support more deeply nes
 	overflow: hidden;
 	font-size: 11px;
 	padding: 0 4px 0 0;
-	border: 1px solid var(--vscode-chat-requestBorder, var(--vscode-input-background, transparent));
+	border: 0.5px solid var(--vscode-chat-requestBorder, var(--vscode-input-background, transparent));
 	border-radius: 4px;
 	height: 18px;
 	max-width: 100%;
@@ -1612,7 +1612,7 @@ have to be updated for changes to the rules above, or to support more deeply nes
 	padding: 2px 4px 2px 4px;
 	height: fit-content;
 	gap: 0;
-	border: 1px solid var(--vscode-chat-requestBorder, var(--vscode-input-background, transparent));
+	border: 0.5px solid var(--vscode-chat-requestBorder, var(--vscode-input-background, transparent));
 	border-radius: 4px;
 	box-sizing: border-box;
 
@@ -1981,7 +1981,7 @@ have to be updated for changes to the rules above, or to support more deeply nes
 	flex-wrap: wrap;
 	align-items: center;
 	border-radius: 4px;
-	border: 1px solid var(--vscode-chat-requestBorder);
+	border: 0.5px solid var(--vscode-chat-requestBorder);
 
 	.chat-view-changes-icon {
 		padding: 3px;
@@ -2078,7 +2078,7 @@ have to be updated for changes to the rules above, or to support more deeply nes
 .chat-used-context-list,
 .chat-quota-error-widget,
 .chat-rate-limited-widget {
-	border: 1px solid var(--vscode-chat-requestBorder);
+	border: 0.5px solid var(--vscode-chat-requestBorder);
 	border-radius: 4px;
 	margin-bottom: 8px;
 }
@@ -2347,7 +2347,7 @@ have to be updated for changes to the rules above, or to support more deeply nes
 }
 
 .chat-attached-context-hover .chat-attached-context-url-separator {
-	border-top: 1px solid var(--vscode-chat-requestBorder);
+	border-top: 0.5px solid var(--vscode-chat-requestBorder);
 	left: 0;
 	right: 0;
 	position: absolute;
@@ -2506,7 +2506,7 @@ have to be updated for changes to the rules above, or to support more deeply nes
 
 	.hc-black .interactive-item-container.interactive-request .value .rendered-markdown,
 	.hc-light .interactive-item-container.interactive-request .value .rendered-markdown {
-		border: 1px dotted var(--vscode-focusBorder);
+		border: 0.5px dotted var(--vscode-focusBorder);
 	}
 
 	.interactive-item-container.interactive-request .value .rendered-markdown > :last-child {
@@ -2554,7 +2554,7 @@ have to be updated for changes to the rules above, or to support more deeply nes
 		overflow: hidden;
 		z-index: 100;
 		background-color: var(--vscode-interactive-result-editor-background-color, var(--vscode-editor-background));
-		border: 1px solid var(--vscode-chat-requestBorder);
+		border: 0.5px solid var(--vscode-chat-requestBorder);
 		top: -13px;
 		right: 20px;
 		border-radius: 3px;
@@ -2605,7 +2605,7 @@ have to be updated for changes to the rules above, or to support more deeply nes
 		position: relative;
 
 		.checkpoint-divider {
-			border-top: 1px dashed var(--vscode-chat-checkpointSeparator);
+			border-top: 0.5px dashed var(--vscode-chat-checkpointSeparator);
 			margin: 15px 0;
 			width: 100%;
 			height: 0;
@@ -2636,7 +2636,7 @@ have to be updated for changes to the rules above, or to support more deeply nes
 		}
 
 		.monaco-toolbar .action-label {
-			border: 1px solid var(--vscode-chat-requestBorder, var(--vscode-input-background));
+			border: 0.5px solid var(--vscode-chat-requestBorder, var(--vscode-input-background));
 			padding: 1px 5px;
 			background-color: var(--vscode-sideBar-background);
 		}
@@ -2850,7 +2850,7 @@ have to be updated for changes to the rules above, or to support more deeply nes
 	height: 16px;
 	background-color: currentColor;
 	opacity: 0.5;
-	border-radius: 1px;
+	border-radius: 0.5px;
 	align-self: center;
 	flex-shrink: 0;
 }

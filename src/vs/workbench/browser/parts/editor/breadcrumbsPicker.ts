@@ -97,7 +97,7 @@ export abstract class BreadcrumbsPicker<TInput, TElement> {
 		this._treeContainer.style.paddingTop = '2px';
 		this._treeContainer.style.borderRadius = '3px';
 		this._treeContainer.style.boxShadow = `0 0 8px 2px ${this._themeService.getColorTheme().getColor(widgetShadow)}`;
-		this._treeContainer.style.border = `1px solid ${this._themeService.getColorTheme().getColor(widgetBorder)}`;
+		this._treeContainer.style.border = `0.5px solid ${this._themeService.getColorTheme().getColor(widgetBorder)}`;
 		this._domNode.appendChild(this._treeContainer);
 
 		this._layoutInfo = { maxHeight, width, arrowSize, arrowOffset, inputHeight: 0 };

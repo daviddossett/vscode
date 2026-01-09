@@ -13,7 +13,7 @@ import { MarshalledId } from '../../../../../../base/common/marshallingIds.js';
 import { autorun, IReader } from '../../../../../../base/common/observable.js';
 import { URI } from '../../../../../../base/common/uri.js';
 import { localize } from '../../../../../../nls.js';
-import { MenuWorkbenchToolBar } from '../../../../../../platform/actions/browser/toolbar.js';
+import { HiddenItemStrategy, MenuWorkbenchToolBar } from '../../../../../../platform/actions/browser/toolbar.js';
 import { MenuId } from '../../../../../../platform/actions/common/actions.js';
 import { IConfigurationService } from '../../../../../../platform/configuration/common/configuration.js';
 import { IContextKey, IContextKeyService } from '../../../../../../platform/contextkey/common/contextkey.js';
@@ -126,6 +126,8 @@ export class ChatViewPane extends ViewPane implements IViewWelcomeDelegate {
 		this.sessionsViewerOrientationContext = ChatContextKeys.agentSessionsViewerOrientation.bindTo(contextKeyService);
 		this.sessionsViewerPositionContext = ChatContextKeys.agentSessionsViewerPosition.bindTo(contextKeyService);
 		this.sessionsViewerVisibilityContext = ChatContextKeys.agentSessionsViewerVisible.bindTo(contextKeyService);
+		// Set chat location for toolbar actions
+		ChatContextKeys.location.bindTo(contextKeyService).set(ChatAgentLocation.Chat);
 
 		this.updateContextKeys(false);
 
@@ -322,7 +324,10 @@ export class ChatViewPane extends ViewPane implements IViewWelcomeDelegate {
 		// Sessions Toolbar
 		const sessionsToolbarContainer = append(sessionsTitleContainer, $('.agent-sessions-toolbar'));
 		const sessionsToolbar = this._register(this.instantiationService.createInstance(MenuWorkbenchToolBar, sessionsToolbarContainer, MenuId.AgentSessionsToolbar, {
-			menuOptions: { shouldForwardArgs: true }
+			menuOptions: { shouldForwardArgs: true },
+			toggleMenuTitle: localize('moreActions', "More Actions..."),
+			hiddenItemStrategy: HiddenItemStrategy.RenderInSecondaryGroup,
+			overflowBehavior: { maxItems: 2 }
 		}));
 
 		// Sessions Filter
@@ -332,7 +337,7 @@ export class ChatViewPane extends ViewPane implements IViewWelcomeDelegate {
 				return that.sessionsViewerLimited ? ChatViewPane.SESSIONS_LIMIT : undefined;
 			},
 			groupResults: () => {
-				return !that.sessionsViewerLimited;
+				return false;
 			},
 			overrideExclude(session) {
 				if (that.sessionsViewerLimited) {

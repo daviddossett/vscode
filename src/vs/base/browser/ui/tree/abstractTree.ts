@@ -2865,7 +2865,7 @@ export abstract class AbstractTree<T, TFilterData, TRef> implements IDisposable 
 
 		// Sticky Scroll Border
 		if (styles.treeStickyScrollBorder) {
-			content.push(`.monaco-list${suffix} .monaco-scrollable-element .monaco-tree-sticky-container { border-bottom: 1px solid ${styles.treeStickyScrollBorder}; }`);
+			content.push(`.monaco-list${suffix} .monaco-scrollable-element .monaco-tree-sticky-container { border: 0.5px solid ${styles.treeStickyScrollBorder}; }`);
 		}
 
 		// Sticky Scroll Shadow

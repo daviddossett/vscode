@@ -94,7 +94,7 @@ export class Rulers extends ViewPart {
 			const node = this._renderedRulers[i];
 			const ruler = this._rulers[i];
 
-			node.setBoxShadow(ruler.color ? `1px 0 0 0 ${ruler.color} inset` : ``);
+			node.setBoxShadow(ruler.color ? `0.5px 0 0 0 ${ruler.color} inset` : ``);
 			node.setHeight(Math.min(ctx.scrollHeight, 1000000));
 			node.setLeft(ruler.column * this._typicalHalfwidthCharacterWidth);
 		}

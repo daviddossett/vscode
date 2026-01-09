@@ -179,7 +179,7 @@ export class OpenEditorsView extends ViewPane {
 
 		this.dirtyCountElement.style.backgroundColor = asCssVariable(badgeBackground);
 		this.dirtyCountElement.style.color = asCssVariable(badgeForeground);
-		this.dirtyCountElement.style.border = `1px solid ${asCssVariable(contrastBorder)}`;
+		this.dirtyCountElement.style.border = `0.5px solid ${asCssVariable(contrastBorder)}`;
 
 		this.updateDirtyIndicator();
 	}

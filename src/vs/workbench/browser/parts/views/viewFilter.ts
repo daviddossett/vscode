@@ -200,7 +200,7 @@ export class FilterWidget extends Widget {
 		const filterBadge = DOM.append(container, DOM.$('.viewpane-filter-badge.hidden'));
 		filterBadge.style.backgroundColor = asCssVariable(badgeBackground);
 		filterBadge.style.color = asCssVariable(badgeForeground);
-		filterBadge.style.border = `1px solid ${asCssVariable(contrastBorder)}`;
+		filterBadge.style.border = `0.5px solid ${asCssVariable(contrastBorder)}`;
 		return filterBadge;
 	}
 

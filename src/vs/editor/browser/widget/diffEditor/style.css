@@ -254,7 +254,7 @@
 .monaco-editor .line-insert,
 .monaco-editor .char-insert {
 	box-sizing: border-box;
-	border: 1px solid var(--vscode-diffEditor-insertedTextBorder);
+	border: 0.5px solid var(--vscode-diffEditor-insertedTextBorder);
 }
 .monaco-editor.hc-black .line-insert, .monaco-editor.hc-light .line-insert,
 .monaco-editor.hc-black .char-insert, .monaco-editor.hc-light .char-insert {
@@ -264,7 +264,7 @@
 .monaco-editor .line-delete,
 .monaco-editor .char-delete {
 	box-sizing: border-box;
-	border: 1px solid var(--vscode-diffEditor-removedTextBorder);
+	border: 0.5px solid var(--vscode-diffEditor-removedTextBorder);
 }
 .monaco-editor.hc-black .line-delete, .monaco-editor.hc-light .line-delete,
 .monaco-editor.hc-black .char-delete, .monaco-editor.hc-light .char-delete {
@@ -295,12 +295,12 @@
 
 .monaco-diff-editor.side-by-side .editor.modified {
 	box-shadow: -6px 0 5px -5px var(--vscode-scrollbar-shadow);
-	border-left: 1px solid var(--vscode-diffEditor-border);
+	border-left: 0.5px solid var(--vscode-diffEditor-border);
 }
 
 .monaco-diff-editor.side-by-side .editor.original {
 	box-shadow: 6px 0 5px -5px var(--vscode-scrollbar-shadow);
-	border-right: 1px solid var(--vscode-diffEditor-border);
+	border-right: 0.5px solid var(--vscode-diffEditor-border);
 }
 
 .monaco-diff-editor .diffViewport {
@@ -407,7 +407,7 @@
 	height: 11px;
 	.line-left, .line-right {
 		height: 1px;
-		border-top: 1px solid;
+		border-top: 0.5px solid;
 		border-color: var(--vscode-editorCodeLens-foreground);
 		opacity: 0.5;
 		margin: auto;

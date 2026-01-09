@@ -101,7 +101,7 @@
 	justify-content: space-between;
 	margin: 4px 0;
 	cursor: default;
-	color: var(--vscode-descriptionForeground);
+	color: var(--vscode-disabledForeground);
 }
 
 .monaco-workbench .part.editor > .content .editor-group-container > .editor-group-watermark .shortcuts dl:first-of-type {
@@ -114,11 +114,13 @@
 
 .monaco-workbench .part.editor > .content .editor-group-container > .editor-group-watermark .shortcuts dt {
 	letter-spacing: 0.04em;
+	font-weight: normal;
 }
 
 .monaco-workbench .part.editor > .content .editor-group-container > .editor-group-watermark .shortcuts dd {
 	text-align: left;
 	margin-inline-start: 24px;
+	opacity: 0.7;
 }
 
 /* Title */

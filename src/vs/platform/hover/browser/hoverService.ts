@@ -628,7 +628,7 @@ registerSingleton(IHoverService, HoverService, InstantiationType.Delayed);
 registerThemingParticipant((theme, collector) => {
 	const hoverBorder = theme.getColor(editorHoverBorder);
 	if (hoverBorder) {
-		collector.addRule(`.monaco-hover.workbench-hover .hover-row:not(:first-child):not(:empty) { border-top: 1px solid ${hoverBorder.transparent(0.5)}; }`);
-		collector.addRule(`.monaco-hover.workbench-hover hr { border-top: 1px solid ${hoverBorder.transparent(0.5)}; }`);
+		collector.addRule(`.monaco-hover.workbench-hover .hover-row:not(:first-child):not(:empty) { border: 0.5px solid ${hoverBorder.transparent(0.5)}; }`);
+		collector.addRule(`.monaco-hover.workbench-hover hr { border: 0.5px solid ${hoverBorder.transparent(0.5)}; }`);
 	}
 });

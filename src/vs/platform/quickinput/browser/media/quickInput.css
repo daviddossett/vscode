@@ -203,7 +203,7 @@
 }
 
 .quick-input-list .quick-input-list-entry.quick-input-list-separator-border {
-	border-top-width: 1px;
+	border-top-width: 0.5px;
 	border-top-style: solid;
 }
 

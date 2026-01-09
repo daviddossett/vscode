@@ -163,7 +163,7 @@ export class DebugHoverWidget implements IContentWidget {
 
 		this.editor.applyFontInfo(this.domNode);
 		this.domNode.style.backgroundColor = asCssVariable(editorHoverBackground);
-		this.domNode.style.border = `1px solid ${asCssVariable(editorHoverBorder)}`;
+		this.domNode.style.border = `0.5px solid ${asCssVariable(editorHoverBorder)}`;
 		this.domNode.style.color = asCssVariable(editorHoverForeground);
 
 		this.toDispose.push(this.tree.onContextMenu(async e => await this.onContextMenu(e)));

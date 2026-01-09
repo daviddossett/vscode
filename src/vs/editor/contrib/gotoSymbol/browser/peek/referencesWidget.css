@@ -5,8 +5,8 @@
 
 /* -- zone widget */
 .monaco-editor .zone-widget .zone-widget-container.reference-zone-widget {
-	border-top-width: 1px;
-	border-bottom-width: 1px;
+	border-top-width: 0.5px;
+	border-bottom-width: 0.5px;
 }
 
 .monaco-editor .reference-zone-widget .inline {
@@ -82,6 +82,6 @@
 
 .monaco-editor.hc-black .reference-zone-widget .ref-tree .referenceMatch .highlight,
 .monaco-editor.hc-light .reference-zone-widget .ref-tree .referenceMatch .highlight {
-	border: 1px dotted var(--vscode-contrastActiveBorder, transparent);
+	border: 0.5px dotted var(--vscode-contrastActiveBorder, transparent);
 	box-sizing: border-box;
 }

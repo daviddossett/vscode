@@ -11,7 +11,7 @@
 	width: 20px;
 	height: 20px;
 	border-radius: 3px;
-	border: 1px solid transparent;
+	border: 0.5px solid transparent;
 	padding: 1px;
 	box-sizing:	border-box;
 	user-select: none;
@@ -24,7 +24,7 @@
 
 .hc-black .monaco-custom-toggle:hover,
 .hc-light .monaco-custom-toggle:hover {
-	border: 1px dashed var(--vscode-focusBorder);
+	border: 0.5px dashed var(--vscode-focusBorder);
 }
 
 .hc-black .monaco-custom-toggle,
@@ -40,7 +40,7 @@
 .monaco-custom-toggle.monaco-checkbox {
 	height: 18px;
 	width: 18px;
-	border: 1px solid transparent;
+	border: 0.5px solid transparent;
 	border-radius: 3px;
 	margin-right: 9px;
 	margin-left: 0px;

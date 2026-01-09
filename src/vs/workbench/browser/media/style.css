@@ -62,7 +62,7 @@ body {
 
 .monaco-workbench.border:not(.fullscreen) {
 	box-sizing: border-box;
-	border: 1px solid var(--window-border-color);
+	border: 0.5px solid var(--window-border-color);
 }
 
 .monaco-workbench.border.mac {
@@ -198,7 +198,7 @@ body {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	/* Hides inner border from FF */
-	border: 1px solid;
+	border: 0.5px solid;
 }
 
 .monaco-workbench .select-container {

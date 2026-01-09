@@ -7,6 +7,9 @@
 .chat-viewpane {
 	display: flex;
 	flex-direction: column;
+	flex: 1;
+	height: 100%;
+	min-height: 0;
 
 	.chat-controls-container {
 		display: flex;
@@ -19,6 +22,7 @@
 		.interactive-session {
 
 			/* needed so that the chat welcome and chat input does not overflow and input grows over welcome */
+			flex: 1;
 			width: 100%;
 			min-height: 0;
 			min-width: 0;
@@ -45,6 +49,13 @@
 .chat-viewpane.has-sessions-control .agent-sessions-container {
 	display: flex;
 	flex-direction: column;
+	height: 100%;
+	min-height: 0;
+
+	.agent-sessions-control-container {
+		flex: 1;
+		min-height: 0;
+	}
 
 	.agent-sessions-title-container {
 		display: flex;
@@ -99,18 +110,24 @@
 .chat-viewpane.has-sessions-control.sessions-control-orientation-stacked {
 
 	.agent-sessions-container {
-		border-bottom: 1px solid var(--vscode-panel-border);
+		border-bottom: 0.5px solid var(--vscode-panel-border);
 	}
 }
 
 /* Sessions control: side by side */
 .chat-viewpane.has-sessions-control.sessions-control-orientation-sidebyside {
+	align-items: stretch;
+
+	.agent-sessions-container,
+	.chat-controls-container {
+		height: 100%;
+	}
 
 	&.chat-view-position-left {
 		flex-direction: row;
 
 		.agent-sessions-container {
-			border-right: 1px solid var(--vscode-panel-border);
+			border-right: 0.5px solid var(--vscode-panel-border);
 		}
 	}
 
@@ -118,7 +135,7 @@
 		flex-direction: row-reverse;
 
 		.agent-sessions-container {
-			border-left: 1px solid var(--vscode-panel-border);
+			border-left: 0.5px solid var(--vscode-panel-border);
 		}
 	}
 
@@ -138,7 +155,7 @@
 
 	/* Base padding: left-aligned content */
 	.agent-sessions-title-container {
-		padding: 0 8px 0 20px;
+		padding: 8px 8px 0 20px;
 	}
 
 	.agent-session-section {
@@ -149,7 +166,7 @@
 	&.sessions-control-orientation-sidebyside.chat-view-position-right {
 
 		.agent-sessions-title-container {
-			padding: 0 8px;
+			padding: 8px 8px 0;
 		}
 
 		.agent-session-section {

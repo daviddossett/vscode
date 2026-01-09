@@ -165,7 +165,7 @@
 	align-items: stretch;
 	color: var(--vscode-commandCenter-foreground);
 	background-color: var(--vscode-commandCenter-background);
-	border: 1px solid var(--vscode-commandCenter-border);
+	border: 0.5px solid var(--vscode-commandCenter-border);
 	overflow: hidden;
 	margin: 0 6px;
 	border-radius: 4px;

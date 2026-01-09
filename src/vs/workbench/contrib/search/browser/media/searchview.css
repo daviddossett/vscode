@@ -345,13 +345,13 @@
 .search-view .replace.findInFileMatch {
 	text-decoration: line-through;
 	background-color: var(--vscode-diffEditor-removedTextBackground);
-	border: 1px solid var(--vscode-diffEditor-removedTextBackground);
+	border: 0.5px solid var(--vscode-diffEditor-removedTextBackground);
 }
 
 /* High Contrast Theming */
 .monaco-workbench.hc-light .search-view .replace.findInFileMatch,
 .monaco-workbench.hc-dark .search-view .replace.findInFileMatch {
-	border: 1px dashed var(--vscode-diffEditor-removedTextBackground);
+	border: 0.5px dashed var(--vscode-diffEditor-removedTextBackground);
 }
 
 .search-view .findInFileMatch,
@@ -361,13 +361,13 @@
 
 .search-view .findInFileMatch {
 	background-color: var(--vscode-editor-findMatchHighlightBackground);
-	border: 1px solid var(--vscode-editor-findMatchHighlightBorder);
+	border: 0.5px solid var(--vscode-editor-findMatchHighlightBorder);
 }
 
 /* High Contrast Theming */
 .monaco-workbench.hc-light .search-view .findInFileMatch,
 .monaco-workbench.hc-dark .search-view .findInFileMatch {
-	border: 1px dashed var(--vscode-editor-findMatchHighlightBorder);
+	border: 0.5px dashed var(--vscode-editor-findMatchHighlightBorder);
 }
 
 .search-view .replaceMatch {
@@ -384,13 +384,13 @@
 }
 
 .search-view .replaceMatch:not(:empty) {
-	border: 1px solid var(--vscode-diffEditor-insertedLineBackground);
+	border: 0.5px solid var(--vscode-diffEditor-insertedLineBackground);
 }
 
 /* High Contrast Theming */
 .monaco-workbench.hc-light .search-view .replaceMatch:not(:empty),
 .monaco-workbench.hc-dark .search-view .replaceMatch:not(:empty) {
-	border: 1px dashed var(--vscode-diffEditor-insertedLineBackground);
+	border: 0.5px dashed var(--vscode-diffEditor-insertedLineBackground);
 }
 
 /* High Contrast Theming */
@@ -404,7 +404,7 @@
 }
 
 .monaco-workbench.vs .search-panel .search-view .monaco-inputbox {
-	border: 1px solid transparent;
+	border: 0.5px solid transparent;
 }
 
 /* shared with search editor's message element */

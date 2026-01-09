@@ -779,7 +779,7 @@ export class BrowserTitlebarPart extends Part implements ITitlebarPart {
 			this.element.style.color = titleForeground || '';
 
 			const titleBorder = this.getColor(TITLE_BAR_BORDER);
-			this.element.style.borderBottom = titleBorder ? `1px solid ${titleBorder}` : '';
+			this.element.style.borderBottom = titleBorder ? `0.5px solid ${titleBorder}` : '';
 		}
 	}
 

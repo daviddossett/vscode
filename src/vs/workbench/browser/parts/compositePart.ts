@@ -447,7 +447,7 @@ export abstract class CompositePart<T extends Composite, MementoType extends obj
 			updateStyles: () => {
 				titleLabel.style.color = $this.titleForegroundColor ? $this.getColor($this.titleForegroundColor) || '' : '';
 				const borderColor = $this.titleBorderColor ? $this.getColor($this.titleBorderColor) : undefined;
-				parent.style.borderBottom = borderColor ? `1px solid ${borderColor}` : '';
+				parent.style.borderBottom = borderColor ? `0.5px solid ${borderColor}` : '';
 			}
 		};
 	}

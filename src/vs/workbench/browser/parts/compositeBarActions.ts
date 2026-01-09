@@ -224,7 +224,7 @@ export class CompositeBarActionViewItem extends BaseActionViewItem {
 			this.badgeContent.style.backgroundColor = badgeBg ? badgeBg.toString() : '';
 
 			this.badgeContent.style.borderStyle = contrastBorderColor && !this.options.compact ? 'solid' : '';
-			this.badgeContent.style.borderWidth = contrastBorderColor ? '1px' : '';
+			this.badgeContent.style.borderWidth = contrastBorderColor ? '0.5px' : '';
 			this.badgeContent.style.borderColor = contrastBorderColor ? contrastBorderColor.toString() : '';
 		}
 	}

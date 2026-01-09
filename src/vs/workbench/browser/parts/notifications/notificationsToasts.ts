@@ -493,7 +493,7 @@ export class NotificationsToasts extends Themable implements INotificationsToast
 			toast.style.boxShadow = widgetShadowColor ? `0 0 8px 2px ${widgetShadowColor}` : '';
 
 			const borderColor = this.getColor(NOTIFICATIONS_TOAST_BORDER);
-			toast.style.border = borderColor ? `1px solid ${borderColor}` : '';
+			toast.style.border = borderColor ? `0.5px solid ${borderColor}` : '';
 		});
 	}
 

@@ -501,7 +501,7 @@ export abstract class QuickInput extends Disposable implements IQuickInput {
 			const styles = this.ui.inputBox.stylesForType(severity);
 			this.ui.message.style.color = styles.foreground ? `${styles.foreground}` : '';
 			this.ui.message.style.backgroundColor = styles.background ? `${styles.background}` : '';
-			this.ui.message.style.border = styles.border ? `1px solid ${styles.border}` : '';
+			this.ui.message.style.border = styles.border ? `0.5px solid ${styles.border}` : '';
 			this.ui.message.style.marginBottom = '-2px';
 		} else {
 			this.ui.message.style.color = '';

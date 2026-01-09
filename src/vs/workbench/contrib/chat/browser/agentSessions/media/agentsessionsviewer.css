@@ -3,6 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
+.agent-sessions-new-button-container {
+	padding: 8px;
+
+	.monaco-button {
+		width: 100%;
+	}
+}
+
 .agent-sessions-viewer {
 
 	flex: 1 1 auto;

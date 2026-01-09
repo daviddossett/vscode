@@ -172,21 +172,21 @@
 }
 
 .monaco-workbench .pane-body.integrated-terminal .split-view-view:first-child .tabs-container {
-	border-right-width: 1px;
+	border-right-width: 0.5px;
 	border-right-style: solid;
 }
 .monaco-workbench .pane-body.integrated-terminal .split-view-view:last-child .tabs-container {
-	border-left-width: 1px;
+	border-left-width: 0.5px;
 	border-left-style: solid;
 }
 
 /* border-color is set by theme key terminal.border */
 .monaco-workbench .pane-body.integrated-terminal .terminal-group .monaco-split-view2.horizontal .split-view-view:not(:first-child) {
-	border-left-width: 1px;
+	border-left-width: 0.5px;
 	border-left-style: solid;
 }
 .monaco-workbench .pane-body.integrated-terminal .terminal-group .monaco-split-view2.vertical .split-view-view:not(:first-child) {
-	border-top-width: 1px;
+	border-top-width: 0.5px;
 	border-top-style: solid;
 }
 
@@ -216,7 +216,7 @@
 .monaco-workbench.hc-light .pane-body.integrated-terminal .xterm.focus::before {
 	display: block;
 	content: "";
-	border: 1px solid;
+	border: 0.5px solid;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -251,12 +251,12 @@
 
 .monaco-workbench .part.sidebar > .title > .title-actions .switch-terminal,
 .monaco-pane-view .pane > .pane-header .monaco-action-bar .switch-terminal {
-	border-width: 1px;
+	border-width: 0.5px;
 	border-style: solid;
 }
 
 .part.panel > .title > .title-actions .switch-terminal > .monaco-select-box {
-	border-width: 1px;
+	border-width: 0.5px;
 	border-style: solid;
 }
 
@@ -546,24 +546,24 @@
 	margin-left: -20px;
 }
 .terminal-command-guide.top {
-	border-top-left-radius: 1px;
-	border-top-right-radius: 1px;
+	border-top-left-radius: 0.5px;
+	border-top-right-radius: 0.5px;
 }
 .terminal-command-guide.bottom {
-	border-bottom-left-radius: 1px;
-	border-bottom-right-radius: 1px;
+	border-bottom-left-radius: 0.5px;
+	border-bottom-right-radius: 0.5px;
 }
 
 .terminal-scroll-highlight-outline {
-	border-left: 1px solid #ffffff;
-	border-right: 1px solid #ffffff;
+	border-left: 0.5px solid #ffffff;
+	border-right: 0.5px solid #ffffff;
 	pointer-events: none;
 }
 .terminal-scroll-highlight-outline.top {
-	border-top: 1px solid #ffffff;
+	border-top: 0.5px solid #ffffff;
 }
 .terminal-scroll-highlight-outline.bottom {
-	border-bottom: 1px solid #ffffff;
+	border-bottom: 0.5px solid #ffffff;
 }
 
 .terminal-scroll-highlight,

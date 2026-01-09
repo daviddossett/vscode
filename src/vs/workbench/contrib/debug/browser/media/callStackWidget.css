@@ -10,7 +10,7 @@
 		align-items: center;
 		height: 24px;
 		background: var(--vscode-multiDiffEditor-headerBackground);
-		border-top: 1px solid var(--vscode-multiDiffEditor-border);
+		border-top: 0.5px solid var(--vscode-multiDiffEditor-border);
 		color: var(--vscode-foreground);
 		padding: 0 5px;
 	}
@@ -32,7 +32,7 @@
 
 	&.collapsed {
 		.header {
-			border-bottom: 1px solid var(--vscode-multiDiffEditor-border);
+			border-bottom: 0.5px solid var(--vscode-multiDiffEditor-border);
 		}
 
 		.editorParent {

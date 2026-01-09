@@ -25,13 +25,15 @@ import { RenderIndentGuides, TreeFindMode } from '../../../../../base/browser/ui
 import { IAgentSessionsService } from './agentSessionsService.js';
 import { ITelemetryService } from '../../../../../platform/telemetry/common/telemetry.js';
 import { IListStyles } from '../../../../../base/browser/ui/list/listWidget.js';
-import { IStyleOverride } from '../../../../../platform/theme/browser/defaultStyles.js';
+import { defaultButtonStyles, IStyleOverride } from '../../../../../platform/theme/browser/defaultStyles.js';
 import { IAgentSessionsControl } from './agentSessions.js';
 import { HoverPosition } from '../../../../../base/browser/ui/hover/hoverWidget.js';
 import { URI } from '../../../../../base/common/uri.js';
 import { openSession } from './agentSessionsOpener.js';
 import { IEditorService } from '../../../../services/editor/common/editorService.js';
 import { ChatEditorInput } from '../widgetHosts/editor/chatEditorInput.js';
+import { Button } from '../../../../../base/browser/ui/button/button.js';
+import { localize } from '../../../../../nls.js';
 
 export interface IAgentSessionsControlOptions extends IAgentSessionsSorterOptions {
 	readonly overrideStyles?: IStyleOverride<IListStyles>;
@@ -116,6 +118,12 @@ export class AgentSessionsControl extends Disposable implements IAgentSessionsCo
 	}
 
 	private createList(container: HTMLElement): void {
+		// New session button
+		const newSessionButtonContainer = append(container, $('.agent-sessions-new-button-container'));
+		const newSessionButton = this._register(new Button(newSessionButtonContainer, { secondary: true, ...defaultButtonStyles }));
+		newSessionButton.label = localize('newSession', "New session");
+		this._register(newSessionButton.onDidClick(() => this.commandService.executeCommand(ACTION_ID_NEW_CHAT)));
+
 		this.sessionsContainer = append(container, $('.agent-sessions-viewer'));
 
 		const sorter = new AgentSessionsSorter(this.options);

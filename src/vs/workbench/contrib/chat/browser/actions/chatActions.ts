@@ -163,7 +163,7 @@ abstract class OpenChatGlobalAction extends Action2 {
 	constructor(overrides: Pick<ICommandPaletteOptions, 'keybinding' | 'title' | 'id' | 'menu'>, private readonly mode?: IChatMode) {
 		super({
 			...overrides,
-			icon: Codicon.chatSparkle,
+			icon: Codicon.copilotLarge,
 			f1: true,
 			category: CHAT_CATEGORY,
 			precondition: ContextKeyExpr.and(
@@ -908,13 +908,12 @@ Update \`.github/copilot-instructions.md\` for the user, then ask for feedback o
 		}
 	});
 
-	MenuRegistry.appendMenuItem(MenuId.ViewTitle, {
+	// Add "Configure Chat" to sessions toolbar overflow menu
+	MenuRegistry.appendMenuItem(MenuId.AgentSessionsToolbar, {
 		submenu: CHAT_CONFIG_MENU_ID,
 		title: localize2('config.label', "Configure Chat"),
-		group: 'navigation',
-		when: ContextKeyExpr.equals('view', ChatViewId),
-		icon: Codicon.gear,
-		order: 6
+		group: 'overflow',
+		order: 10
 	});
 }
 
@@ -940,7 +939,7 @@ const defaultChat = {
 MenuRegistry.appendMenuItem(MenuId.CommandCenter, {
 	submenu: MenuId.ChatTitleBarMenu,
 	title: localize('title4', "Chat"),
-	icon: Codicon.chatSparkle,
+	icon: Codicon.copilotLarge,
 	when: ContextKeyExpr.and(
 		ChatContextKeys.supported,
 		ContextKeyExpr.and(
@@ -957,7 +956,7 @@ MenuRegistry.appendMenuItem(MenuId.TitleBar, {
 	submenu: MenuId.ChatTitleBarMenu,
 	title: localize('title4', "Chat"),
 	group: 'navigation',
-	icon: Codicon.chatSparkle,
+	icon: Codicon.copilotLarge,
 	when: ContextKeyExpr.and(
 		ChatContextKeys.supported,
 		ContextKeyExpr.and(
@@ -1018,7 +1017,7 @@ export class CopilotTitleBarMenuRendering extends Disposable implements IWorkben
 			const isAuxiliaryWindow = windowId !== mainWindow.vscodeWindowId;
 			let primaryActionId = isAuxiliaryWindow ? CHAT_OPEN_ACTION_ID : TOGGLE_CHAT_ACTION_ID;
 			let primaryActionTitle = isAuxiliaryWindow ? localize('openChat', "Open Chat") : localize('toggleChat', "Toggle Chat");
-			let primaryActionIcon = Codicon.chatSparkle;
+			let primaryActionIcon = Codicon.copilotLarge;
 			if (chatSentiment.installed && !chatSentiment.disabled) {
 				if (signedOut && !anonymous) {
 					primaryActionId = CHAT_SETUP_ACTION_ID;
