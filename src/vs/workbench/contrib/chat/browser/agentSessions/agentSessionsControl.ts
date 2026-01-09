@@ -55,6 +55,7 @@ type AgentSessionOpenedEvent = {
 
 export class AgentSessionsControl extends Disposable implements IAgentSessionsControl {
 
+	private newSessionButtonContainer: HTMLElement | undefined;
 	private sessionsContainer: HTMLElement | undefined;
 	private sessionsList: WorkbenchCompressibleAsyncDataTree<IAgentSessionsModel, AgentSessionListItem, FuzzyScore> | undefined;
 
@@ -119,8 +120,8 @@ export class AgentSessionsControl extends Disposable implements IAgentSessionsCo
 
 	private createList(container: HTMLElement): void {
 		// New session button
-		const newSessionButtonContainer = append(container, $('.agent-sessions-new-button-container'));
-		const newSessionButton = this._register(new Button(newSessionButtonContainer, { secondary: true, ...defaultButtonStyles }));
+		this.newSessionButtonContainer = append(container, $('.agent-sessions-new-button-container'));
+		const newSessionButton = this._register(new Button(this.newSessionButtonContainer, { secondary: true, ...defaultButtonStyles }));
 		newSessionButton.label = localize('newSession', "New session");
 		this._register(newSessionButton.onDidClick(() => this.commandService.executeCommand(ACTION_ID_NEW_CHAT)));
 
@@ -255,7 +256,9 @@ export class AgentSessionsControl extends Disposable implements IAgentSessionsCo
 	}
 
 	layout(height: number, width: number): void {
-		this.sessionsList?.layout(height, width);
+		const buttonHeight = this.newSessionButtonContainer?.offsetHeight ?? 0;
+		const availableHeight = height - buttonHeight;
+		this.sessionsList?.layout(availableHeight, width);
 	}
 
 	focus(): void {

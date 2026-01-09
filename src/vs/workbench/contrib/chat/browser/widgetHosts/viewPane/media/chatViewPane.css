@@ -53,6 +53,17 @@
 	min-height: 0;
 
 	.agent-sessions-control-container {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		min-height: 0;
+	}
+
+	.agent-sessions-new-button-container {
+		flex-shrink: 0;
+	}
+
+	.agent-sessions-viewer {
 		flex: 1;
 		min-height: 0;
 	}
