@@ -26,6 +26,12 @@
         "path": "./themes/dark_modern.json"
       },
       {
+        "id": "GitHub Dark Default",
+        "label": "%githubDarkDefaultThemeLabel%",
+        "uiTheme": "vs-dark",
+        "path": "./themes/github_dark_default.json"
+      },
+      {
         "id": "Default Light+",
         "label": "%lightPlusColorThemeLabel%",
         "uiTheme": "vs",
