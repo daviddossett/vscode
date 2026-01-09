@@ -123,7 +123,7 @@ export class ChatViewWelcomeController extends Disposable {
 export interface IChatViewWelcomeContent {
 	readonly icon?: ThemeIcon | URI;
 	readonly title: string;
-	readonly message: IMarkdownString;
+	readonly message?: IMarkdownString;
 	readonly additionalMessage?: string | IMarkdownString;
 	tips?: IMarkdownString;
 	readonly inputPart?: HTMLElement;
@@ -191,10 +191,11 @@ export class ChatViewWelcomePart extends Disposable {
 			const title = dom.append(this.element, $('.chat-welcome-view-title'));
 			title.textContent = content.title;
 
-			const message = dom.append(this.element, $('.chat-welcome-view-message'));
-
-			const messageResult = this.renderMarkdownMessageContent(content.message, options);
-			dom.append(message, messageResult.element);
+			if (content.message) {
+				const message = dom.append(this.element, $('.chat-welcome-view-message'));
+				const messageResult = this.renderMarkdownMessageContent(content.message, options);
+				dom.append(message, messageResult.element);
+			}
 
 			// Additional message
 			if (content.additionalMessage) {
@@ -324,15 +325,17 @@ export class ChatViewWelcomePart extends Disposable {
 	public needsRerender(content: IChatViewWelcomeContent): boolean {
 		// Heuristic based on content that changes between states
 		return !!(
-			this.content.title !== content.title ||
-			this.content.message.value !== content.message.value ||
-			this.content.additionalMessage !== content.additionalMessage ||
-			this.content.tips?.value !== content.tips?.value ||
-			this.content.suggestedPrompts?.length !== content.suggestedPrompts?.length ||
-			this.content.suggestedPrompts?.some((prompt, index) => {
-				const incoming = content.suggestedPrompts?.[index];
-				return incoming?.label !== prompt.label || incoming?.description !== prompt.description;
-			}));
+			this.visible && (
+				this.content.title !== content.title ||
+				this.content.message?.value !== content.message?.value ||
+				this.content.additionalMessage !== content.additionalMessage ||
+				this.content.tips?.value !== content.tips?.value ||
+				this.content.suggestedPrompts?.length !== content.suggestedPrompts?.length ||
+				this.content.suggestedPrompts?.some((prompt, index) => {
+					const incoming = content.suggestedPrompts?.[index];
+					return incoming?.label !== prompt.label || incoming?.description !== prompt.description;
+				}))
+		);
 	}
 
 	private renderMarkdownMessageContent(content: IMarkdownString, options: IChatViewWelcomeRenderOptions | undefined): IRenderedMarkdown {
