@@ -105,7 +105,7 @@ class BrowserNavigationBar extends Disposable {
 		// URL input
 		this._urlInput = $<HTMLInputElement>('input.browser-url-input');
 		this._urlInput.type = 'text';
-		this._urlInput.placeholder = localize('browser.urlPlaceholder', "Enter URL...");
+		this._urlInput.placeholder = localize('browser.urlPlaceholder', "Enter a URL");
 
 		// Create actions toolbar (right side) with scoped context
 		const actionsContainer = $('.browser-actions-toolbar');
@@ -787,15 +787,11 @@ export class BrowserEditor extends EditorPane {
 		content.appendChild(title);
 
 		const subtitle = $('.browser-welcome-subtitle');
-		subtitle.textContent = localize('browser.welcomeSubtitle', "Enter a URL above to get started.");
-		content.appendChild(subtitle);
-
 		const chatEnabled = this.contextKeyService.getContextKeyValue<boolean>(ChatContextKeys.enabled.key);
-		if (chatEnabled) {
-			const tip = $('.browser-welcome-tip');
-			tip.textContent = localize('browser.welcomeTip', "Tip: Use Add Element to Chat to reference UI elements in chat prompts.");
-			content.appendChild(tip);
-		}
+		subtitle.textContent = chatEnabled
+			? localize('browser.welcomeSubtitleChat', "Use Add Element to Chat to reference UI elements in chat prompts.")
+			: localize('browser.welcomeSubtitle', "Enter a URL above to get started.");
+		content.appendChild(subtitle);
 
 		container.appendChild(content);
 		return container;
