@@ -149,14 +149,14 @@ export class ModalEditorPart {
 		// Layout the modal editor part
 		disposables.add(Event.runAndSubscribe(this.layoutService.onDidLayoutMainContainer, () => {
 			const containerDimension = this.layoutService.mainContainerDimension;
-			const width = Math.min(containerDimension.width * 0.8, 1200);
+			const width = Math.min(containerDimension.width * 0.7, 900);
 			const height = Math.min(containerDimension.height * 0.8, 800);
 
 			editorPartContainer.style.width = `${width}px`;
 			editorPartContainer.style.height = `${height}px`;
 
 			const borderSize = 2; // Account for 1px border on all sides and modal header height
-			const headerHeight = 24;
+			const headerHeight = 32;
 			editorPart.layout(width - borderSize, height - borderSize - headerHeight, 0, 0);
 		}));
 
