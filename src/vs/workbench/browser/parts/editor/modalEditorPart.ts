@@ -117,7 +117,7 @@ export class ModalEditorPart {
 		disposables.add(Event.runAndSubscribe(this.layoutService.onDidLayoutMainContainer, () => {
 			const containerDimension = this.layoutService.mainContainerDimension;
 			const width = Math.min(containerDimension.width * 0.7, 900);
-			const height = Math.min(containerDimension.height * 0.8, 800);
+			const height = Math.min(containerDimension.height * 0.7, 700);
 
 			editorPartContainer.style.width = `${width}px`;
 			editorPartContainer.style.height = `${height}px`;
