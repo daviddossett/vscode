@@ -138,7 +138,6 @@ class GoForwardAction extends Action2 {
 				id: MenuId.BrowserNavigationToolbar,
 				group: 'navigation',
 				order: 2,
-				when: CONTEXT_BROWSER_CAN_GO_FORWARD
 			},
 			keybinding: {
 				weight: KeybindingWeight.WorkbenchContrib + 50, // Priority over editor navigation
