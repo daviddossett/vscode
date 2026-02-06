@@ -232,6 +232,7 @@
 			/* push other items to the end */
 			flex: 1;
 			overflow: hidden;
+			white-space: nowrap;
 			margin-right: 16px;
 			mask-image: linear-gradient(to right, black calc(100% - 32px), transparent);
 			-webkit-mask-image: linear-gradient(to right, black calc(100% - 32px), transparent);
