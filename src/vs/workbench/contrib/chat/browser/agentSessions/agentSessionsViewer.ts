@@ -213,11 +213,13 @@ export class AgentSessionRenderer extends Disposable implements ICompressibleTre
 		const hasBadge = this.renderBadge(session, template);
 		template.badge.classList.toggle('has-badge', hasBadge);
 
-		// Description
-		this.renderDescription(session, template, hasBadge);
+		// Description (unless diff is shown)
+		if (!hasDiff) {
+			this.renderDescription(session, template, hasBadge);
+		}
 
-		// Separator (dot between diff/badge and description)
-		template.separator.classList.toggle('has-separator', hasDiff || hasBadge);
+		// Separator (dot between badge and description)
+		template.separator.classList.toggle('has-separator', hasBadge && !hasDiff);
 
 		// Status
 		this.renderStatus(session, template);
