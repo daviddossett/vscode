@@ -93,7 +93,7 @@
 	}
 
 	.agent-sessions-new-button-container {
-		padding: 8px 12px;
+		padding: 8px;
 	}
 }
 
@@ -120,7 +120,7 @@
 	}
 
 	.agent-session-section {
-		padding: 0 12px 0 20px;
+		padding: 0 12px;
 	}
 
 	/* Right position: symmetric padding */
