@@ -18,7 +18,7 @@ import { AgentSessionSection, AgentSessionStatus, getAgentChangesSummary, hasVal
 import { IconLabel } from '../../../../../base/browser/ui/iconLabel/iconLabel.js';
 import { ThemeIcon } from '../../../../../base/common/themables.js';
 import { Codicon } from '../../../../../base/common/codicons.js';
-import { fromNow } from '../../../../../base/common/date.js';
+import { fromNow, getDurationString } from '../../../../../base/common/date.js';
 import { FuzzyScore, createMatches } from '../../../../../base/common/filters.js';
 import { IMarkdownRendererService } from '../../../../../platform/markdown/browser/markdownRenderer.js';
 import { allowedChatMarkdownHtmlTags } from '../widget/chatContentMarkdownRenderer.js';
@@ -326,7 +326,7 @@ export class AgentSessionRenderer extends Disposable implements ICompressibleTre
 			return localize('secondsDuration', "now");
 		}
 
-		return compactDuration(elapsed);
+		return getDurationString(elapsed, false, true);
 	}
 
 	private renderStatus(session: ITreeNode<IAgentSession, FuzzyScore>, template: IAgentSessionItemTemplate): void {
@@ -339,7 +339,7 @@ export class AgentSessionRenderer extends Disposable implements ICompressibleTre
 
 			if (!timeLabel) {
 				const date = getAgentSessionTime(session.timing);
-				timeLabel = compactTimeAgo(date);
+				timeLabel = fromNow(date, false, false, false, true);
 			}
 
 			return timeLabel;
@@ -781,67 +781,6 @@ export function sessionDateFromNow(sessionTime: number): string {
 	}
 
 	return fromNow(sessionTime, false);
-}
-
-const MINUTE = 60;
-const HOUR = MINUTE * 60;
-const COMPACT_DAY = HOUR * 24;
-const COMPACT_WEEK = COMPACT_DAY * 7;
-const COMPACT_MONTH = COMPACT_DAY * 30;
-const COMPACT_YEAR = COMPACT_DAY * 365;
-
-/**
- * Returns a compact relative time string without spaces between number and unit.
- * e.g. "1m", "2h", "1d", "4wk", "3mo", "1yr"
- */
-function compactTimeAgo(date: number): string {
-	const seconds = Math.round((Date.now() - date) / 1000);
-	if (seconds < MINUTE) {
-		return localize('compact.now', 'now');
-	}
-	if (seconds < HOUR) {
-		const value = Math.round(seconds / MINUTE);
-		return localize('compact.minutes', '{0}m', value);
-	}
-	if (seconds < COMPACT_DAY) {
-		const value = Math.round(seconds / HOUR);
-		return localize('compact.hours', '{0}h', value);
-	}
-	if (seconds < COMPACT_WEEK) {
-		const value = Math.round(seconds / COMPACT_DAY);
-		return localize('compact.days', '{0}d', value);
-	}
-	if (seconds < COMPACT_MONTH) {
-		const value = Math.round(seconds / COMPACT_WEEK);
-		return localize('compact.weeks', '{0}w', value);
-	}
-	if (seconds < COMPACT_YEAR) {
-		const value = Math.round(seconds / COMPACT_MONTH);
-		return localize('compact.months', '{0}m', value);
-	}
-	const value = Math.round(seconds / COMPACT_YEAR);
-	return localize('compact.years', '{0}y', value);
-}
-
-/**
- * Returns a compact duration string without spaces between number and unit.
- * e.g. "1s", "5m", "2h"
- */
-function compactDuration(ms: number): string {
-	const seconds = Math.abs(ms / 1000);
-	if (seconds < 1) {
-		return localize('compact.duration.ms', '{0}ms', ms);
-	}
-	if (seconds < MINUTE) {
-		return localize('compact.duration.seconds', '{0}s', Math.round(ms / 1000));
-	}
-	if (seconds < HOUR) {
-		return localize('compact.duration.minutes', '{0}m', Math.round(ms / (1000 * MINUTE)));
-	}
-	if (seconds < COMPACT_DAY) {
-		return localize('compact.duration.hours', '{0}h', Math.round(ms / (1000 * HOUR)));
-	}
-	return localize('compact.duration.days', '{0}d', Math.round(ms / (1000 * COMPACT_DAY)));
 }
 
 export class AgentSessionsIdentityProvider implements IIdentityProvider<IAgentSessionsModel | AgentSessionListItem> {

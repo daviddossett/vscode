@@ -22,8 +22,11 @@ const year = day * 365;
  * shortened (eg. secs).
  * @param disallowNow Whether to disallow the string "now" when the difference
  * is less than 30 seconds.
+ * @param useCompactUnits Whether to use single-letter compact units (eg. 5m, 2h, 3d)
+ * instead of abbreviated words (eg. 5 mins, 2 hrs, 3 days). When true,
+ * appendAgoLabel and useFullTimeWords are ignored.
  */
-export function fromNow(date: number | Date, appendAgoLabel?: boolean, useFullTimeWords?: boolean, disallowNow?: boolean): string {
+export function fromNow(date: number | Date, appendAgoLabel?: boolean, useFullTimeWords?: boolean, disallowNow?: boolean, useCompactUnits?: boolean): string {
 	if (typeof date === 'undefined') {
 		return localize('date.fromNow.unknown', 'unknown');
 	}
@@ -39,6 +42,28 @@ export function fromNow(date: number | Date, appendAgoLabel?: boolean, useFullTi
 
 	if (!disallowNow && seconds < 30) {
 		return localize('date.fromNow.now', 'now');
+	}
+
+	if (useCompactUnits) {
+		if (seconds < minute) {
+			return localize('date.fromNow.compact.seconds', '{0}s', seconds);
+		}
+		if (seconds < hour) {
+			return localize('date.fromNow.compact.minutes', '{0}m', Math.round(seconds / minute));
+		}
+		if (seconds < day) {
+			return localize('date.fromNow.compact.hours', '{0}h', Math.round(seconds / hour));
+		}
+		if (seconds < week) {
+			return localize('date.fromNow.compact.days', '{0}d', Math.round(seconds / day));
+		}
+		if (seconds < month) {
+			return localize('date.fromNow.compact.weeks', '{0}w', Math.round(seconds / week));
+		}
+		if (seconds < year) {
+			return localize('date.fromNow.compact.months', '{0}mo', Math.round(seconds / month));
+		}
+		return localize('date.fromNow.compact.years', '{0}y', Math.round(seconds / year));
 	}
 
 	let value: number;
@@ -231,9 +256,27 @@ export function fromNowByDay(date: number | Date, appendAgoLabel?: boolean, useF
  * @param ms The duration to get in milliseconds.
  * @param useFullTimeWords Whether to use full words (eg. seconds) instead of
  * shortened (eg. secs).
+ * @param useCompactUnits Whether to use single-letter compact units (eg. 5s, 2m, 3h)
+ * instead of abbreviated words (eg. 5s, 2 mins, 3 hrs). When true,
+ * useFullTimeWords is ignored.
  */
-export function getDurationString(ms: number, useFullTimeWords?: boolean) {
+export function getDurationString(ms: number, useFullTimeWords?: boolean, useCompactUnits?: boolean) {
 	const seconds = Math.abs(ms / 1000);
+	if (useCompactUnits) {
+		if (seconds < 1) {
+			return localize('duration.compact.ms', '{0}ms', ms);
+		}
+		if (seconds < minute) {
+			return localize('duration.compact.s', '{0}s', Math.round(ms / 1000));
+		}
+		if (seconds < hour) {
+			return localize('duration.compact.m', '{0}m', Math.round(ms / (1000 * minute)));
+		}
+		if (seconds < day) {
+			return localize('duration.compact.h', '{0}h', Math.round(ms / (1000 * hour)));
+		}
+		return localize('duration.compact.d', '{0}d', Math.round(ms / (1000 * day)));
+	}
 	if (seconds < 1) {
 		return useFullTimeWords
 			? localize('duration.ms.full', '{0} milliseconds', ms)
