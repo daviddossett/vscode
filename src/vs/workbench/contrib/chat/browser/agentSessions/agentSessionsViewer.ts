@@ -780,14 +780,14 @@ export function sessionDateFromNow(sessionTime: number): string {
 	// normalization logic.
 
 	if (sessionTime < startOfToday && sessionTime >= startOfYesterday) {
-		return localize('date.fromNow.days.singular.ago', '1 day ago');
+		return localize('date.fromNow.days.singular', '1 day');
 	}
 
 	if (sessionTime < startOfYesterday && sessionTime >= startOfTwoDaysAgo) {
-		return localize('date.fromNow.days.multiple.ago', '2 days ago');
+		return localize('date.fromNow.days.multiple', '2 days');
 	}
 
-	return fromNow(sessionTime, true);
+	return fromNow(sessionTime, false);
 }
 
 export class AgentSessionsIdentityProvider implements IIdentityProvider<IAgentSessionsModel | AgentSessionListItem> {
