@@ -312,8 +312,8 @@ export class AgentSessionRenderer extends Disposable implements ICompressibleTre
 				const duration = this.toDuration(session.element.timing.lastRequestStarted, session.element.timing.lastRequestEnded, false, true);
 
 				template.description.textContent = session.element.status === AgentSessionStatus.Failed ?
-					localize('chat.session.status.failedAfter', "Failed after {0}.", duration) :
-					localize('chat.session.status.completedAfter', "Completed in {0}.", duration);
+					localize('chat.session.status.failedAfter', "Failed after {0}", duration) :
+					localize('chat.session.status.completedAfter', "Completed in {0}", duration);
 			} else {
 				template.description.textContent = session.element.status === AgentSessionStatus.Failed ?
 					localize('chat.session.status.failed', "Failed") :
