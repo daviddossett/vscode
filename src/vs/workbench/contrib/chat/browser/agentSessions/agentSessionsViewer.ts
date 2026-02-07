@@ -309,11 +309,11 @@ export class AgentSessionRenderer extends Disposable implements ICompressibleTre
 				session.element.timing.lastRequestStarted &&
 				session.element.timing.lastRequestEnded > session.element.timing.lastRequestStarted
 			) {
-				const duration = this.toDuration(session.element.timing.lastRequestStarted, session.element.timing.lastRequestEnded, true);
+				const duration = this.toDuration(session.element.timing.lastRequestStarted, session.element.timing.lastRequestEnded, false, true);
 
 				template.description.textContent = session.element.status === AgentSessionStatus.Failed ?
-					localize('chat.session.status.failedAfter', "Failed after {0}", duration) :
-					localize('chat.session.status.completedAfter', "Completed in {0}", duration);
+					localize('chat.session.status.failedAfter', "Failed after {0}.", duration) :
+					localize('chat.session.status.completedAfter', "Completed in {0}.", duration);
 			} else {
 				template.description.textContent = session.element.status === AgentSessionStatus.Failed ?
 					localize('chat.session.status.failed', "Failed") :
@@ -322,13 +322,13 @@ export class AgentSessionRenderer extends Disposable implements ICompressibleTre
 		}
 	}
 
-	private toDuration(startTime: number, endTime: number, disallowNow: boolean): string {
+	private toDuration(startTime: number, endTime: number, useFullTimeWords: boolean, disallowNow: boolean): string {
 		const elapsed = Math.max(Math.round((endTime - startTime) / 1000) * 1000, 1000 /* clamp to 1s */);
 		if (!disallowNow && elapsed < 60000) {
 			return localize('secondsDuration', "now");
 		}
 
-		return getDurationString(elapsed, false, true);
+		return getDurationString(elapsed, useFullTimeWords);
 	}
 
 	private renderStatus(session: ITreeNode<IAgentSession, FuzzyScore>, template: IAgentSessionItemTemplate): void {
@@ -336,12 +336,17 @@ export class AgentSessionRenderer extends Disposable implements ICompressibleTre
 		const getTimeLabel = (session: IAgentSession) => {
 			let timeLabel: string | undefined;
 			if (session.status === AgentSessionStatus.InProgress && session.timing.lastRequestStarted) {
-				timeLabel = this.toDuration(session.timing.lastRequestStarted, Date.now(), false);
+				timeLabel = this.toDuration(session.timing.lastRequestStarted, Date.now(), false, false);
 			}
 
 			if (!timeLabel) {
 				const date = getAgentSessionTime(session.timing);
-				timeLabel = fromNow(date, false, false, false, true);
+				const seconds = Math.round((new Date().getTime() - date) / 1000);
+				if (seconds < 60) {
+					timeLabel = localize('secondsDuration', "now");
+				} else {
+					timeLabel = sessionDateFromNow(date);
+				}
 			}
 
 			return timeLabel;
@@ -775,14 +780,14 @@ export function sessionDateFromNow(sessionTime: number): string {
 	// normalization logic.
 
 	if (sessionTime < startOfToday && sessionTime >= startOfYesterday) {
-		return localize('date.fromNow.days.singular', '1 day');
+		return localize('date.fromNow.days.singular.ago', '1 day ago');
 	}
 
 	if (sessionTime < startOfYesterday && sessionTime >= startOfTwoDaysAgo) {
-		return localize('date.fromNow.days.multiple', '2 days');
+		return localize('date.fromNow.days.multiple.ago', '2 days ago');
 	}
 
-	return fromNow(sessionTime, false);
+	return fromNow(sessionTime, true);
 }
 
 export class AgentSessionsIdentityProvider implements IIdentityProvider<IAgentSessionsModel | AgentSessionListItem> {
